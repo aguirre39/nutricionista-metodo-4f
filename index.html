@@ -21,9 +21,10 @@
     <meta property="og:image" content="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80">
     <meta property="og:site_name" content="Nutrição Contextual">
 
-    <!-- PRÉ-CONEXÕES (PAGESPEED) -->
+    <!-- PRÉ-CONEXÕES (PAGESPEED - PERFORMANCE MÁXIMA) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- FAVICON E APP ICONS (SEO E BRANDING) -->
@@ -109,27 +110,27 @@
 
     <style>
         /* ==================================================================
-           CSS PURO OTIMIZADO - NOVA IDENTIDADE VISUAL BASEADA NO LOGO
+           CSS PURO OTIMIZADO E ACESSÍVEL (WCAG 2.1 AA)
            ================================================================== */
         :root {
-            /* CORES PRINCIPAIS (Extraídas do Cérebro/Nutrição) */
-            --color-primary: #266768;         /* Teal Elegante */
-            --color-primary-dark: #164344;    /* Teal Escuro para gradientes e CTA */
-            --color-primary-light: #3A8889;   /* Teal Claro */
-            --color-footer: #0D2B2C;          /* Teal super escuro para o rodapé */
+            /* CORES PRINCIPAIS */
+            --color-primary: #266768;         
+            --color-primary-dark: #164344;    
+            --color-primary-light: #3A8889;   
+            --color-footer: #0D2B2C;          
             
-            /* CORES DE DESTAQUE E ACOLHIMENTO (Extraídas da Flor/Contextual) */
-            --color-brand-coral: #D97B65;     /* Coral / Terracota */
-            --color-brand-coral-light: #FDF1EE; /* Fundo suave coral */
+            /* CORES DE DESTAQUE E ACOLHIMENTO */
+            --color-brand-coral: #D97B65;     
+            --color-brand-coral-light: #FDF1EE; 
             --color-brand-coral-dark: #BA624D;
             
             /* CORES DE FUNDO */
-            --color-secondary: #F0F7F7;       /* Fundo suave teal */
+            --color-secondary: #F0F7F7;       
             --color-bg: #FFFFFF;
-            --color-bg-alt: #FAFCFC;          /* Fundo alternativo muito leve */
+            --color-bg-alt: #FAFCFC;          
             
-            /* CORES FUNCIONAIS (Mantido para Conversão/CRO) */
-            --color-accent: #25D366;          /* Verde WhatsApp (INTOCÁVEL PARA CRO) */
+            /* CORES FUNCIONAIS (CRO) */
+            --color-accent: #25D366;          
             --color-accent-hover: #128C7E;
             
             /* TIPOGRAFIA E ESTRUTURA */
@@ -155,6 +156,13 @@
         img { max-width: 100%; height: auto; display: block; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
+
+        /* ACESSIBILIDADE DE TECLADO (FOCUS STATE) */
+        *:focus-visible {
+            outline: 3px solid var(--color-brand-coral);
+            outline-offset: 4px;
+            border-radius: 4px;
+        }
 
         /* UTILITÁRIOS */
         .container {
@@ -205,9 +213,7 @@
             cursor: pointer;
             position: relative;
         }
-        .btn-pulse {
-            animation: pulse-green 2s infinite;
-        }
+        .btn-pulse { animation: pulse-green 2s infinite; }
         .btn:hover {
             background-color: var(--color-accent-hover);
             transform: translateY(-3px);
@@ -215,12 +221,7 @@
             box-shadow: 0 8px 25px rgba(18, 140, 126, 0.4);
         }
         .btn-large { padding: 20px 40px; font-size: 1.2rem; }
-        
-        /* Modificador de botão do cabeçalho */
-        .header-btn {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-        }
+        .header-btn { padding: 10px 20px; font-size: 0.9rem; }
 
         /* ANIMAÇÕES (Scroll Fade) */
         .fade-in-section {
@@ -234,9 +235,7 @@
             transform: none;
         }
 
-        /* =========================================================
-           CABEÇALHO
-           ========================================================= */
+        /* CABEÇALHO */
         header {
             background-color: var(--color-bg);
             padding: 15px 0;
@@ -244,16 +243,14 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            overflow: hidden;
         }
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+        .logo { display: flex; align-items: center; }
         .logo-img {
             height: 90px; 
             transform: scale(1.3); 
@@ -279,8 +276,6 @@
             gap: 50px;
             align-items: center;
         }
-        
-        /* BADGE DE AUTORIDADE CRN */
         .crn-badge {
             display: inline-flex;
             align-items: center;
@@ -296,7 +291,6 @@
             letter-spacing: 0.5px;
         }
         .crn-badge svg { width: 16px; height: 16px; fill: var(--color-brand-coral); }
-
         .hero-text h1 {
             font-size: 3rem;
             font-weight: 800;
@@ -326,7 +320,6 @@
             height: auto;
             display: block;
         }
-        /* BADGE DE EXPERIÊNCIA */
         .experience-badge {
             position: absolute;
             bottom: -25px;
@@ -349,9 +342,7 @@
         section { padding: 80px 0; }
         .bg-alt { background-color: var(--color-bg-alt); }
 
-        /* =========================================================
-           SOBRE A ESPECIALISTA (Integrado na Hero)
-           ========================================================= */
+        /* SOBRE A ESPECIALISTA (Integrado na Hero) */
         .especialista-footer-grid {
             display: grid;
             grid-template-columns: 1.2fr 1fr;
@@ -407,9 +398,7 @@
             color: var(--color-primary);
         }
 
-        /* =========================================================
-           O QUE É A NUTRIÇÃO CONTEXTUAL (CARD EM DESTAQUE)
-           ========================================================= */
+        /* O QUE É A NUTRIÇÃO CONTEXTUAL (CARD EM DESTAQUE) */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2.5fr;
@@ -424,7 +413,6 @@
             position: relative;
             overflow: hidden;
         }
-        /* Efeito super premium de Marca D'água no fundo do Card */
         .about-content::before {
             content: '';
             position: absolute;
@@ -437,37 +425,13 @@
             background-size: contain;
             pointer-events: none;
         }
-        .about-text {
-            position: relative; /* Garante que fique acima da marca d'água */
-            z-index: 2;
-        }
+        .about-text { position: relative; z-index: 2; }
         .about-text h3 { 
             color: white; 
             margin-bottom: 20px; 
             font-size: 2rem; 
             font-weight: 800;
         }
-        .about-text p { 
-            font-size: 1.15rem; 
-            color: rgba(255,255,255,0.9); 
-            line-height: 1.8; 
-        }
-        .about-text strong { 
-            color: var(--color-brand-coral-light); /* Destaque sutil para os termos científicos */
-            font-weight: 700; 
-        }
-        .about-icon {
-            position: relative;
-            z-index: 2;
-        }
-        .about-icon svg {
-            fill: var(--color-brand-coral);
-            width: 100px;
-            height: 100px;
-            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.25)); /* Sombra para dar aspecto 3D no ícone */
-        }
-        
-        /* Novas classes para a lista de features da Nutrição Contextual */
         .about-feature {
             display: flex;
             align-items: flex-start;
@@ -478,7 +442,7 @@
             flex-shrink: 0;
             width: 55px;
             height: 55px;
-            background-color: rgba(217, 123, 101, 0.15); /* Coral com transparência */
+            background-color: rgba(217, 123, 101, 0.15); 
             border-radius: 14px;
             display: flex;
             align-items: center;
@@ -509,6 +473,17 @@
             line-height: 1.7;
             margin: 0;
         }
+        .about-feature-text strong { 
+            color: var(--color-brand-coral-light); 
+            font-weight: 700; 
+        }
+        .about-icon { position: relative; z-index: 2; }
+        .about-icon svg {
+            fill: var(--color-brand-coral);
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.25)); 
+        }
 
         /* CARDS 4 PILARES */
         .pillars-grid {
@@ -525,6 +500,9 @@
             text-align: center;
             transition: var(--transition);
             border: 1px solid #eee;
+            height: 100%; /* Força mesma altura nos cards */
+            display: flex;
+            flex-direction: column;
         }
         .pillar-card:hover {
             transform: translateY(-10px);
@@ -543,7 +521,7 @@
             color: var(--color-brand-coral);
         }
         .pillar-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--color-primary); }
-        .pillar-card p { font-size: 0.95rem; color: var(--color-text-light); }
+        .pillar-card p { font-size: 0.95rem; color: var(--color-text-light); flex-grow: 1; }
 
         /* BENEFÍCIOS */
         .benefits-grid {
@@ -578,12 +556,14 @@
             padding: 30px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
         }
         .stars { color: #FFB400; margin-bottom: 15px; letter-spacing: 2px; }
-        .review-text { font-style: italic; color: var(--color-text-light); margin-bottom: 20px; }
+        .review-text { font-style: italic; color: var(--color-text-light); margin-bottom: 20px; flex-grow: 1; }
         .reviewer { display: flex; align-items: center; gap: 15px; }
         .reviewer img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
-        .reviewer-info h4 { font-size: 1rem; color: var(--color-text); }
+        .reviewer-info h4 { font-size: 1rem; color: var(--color-text); margin: 0; }
         .reviewer-info span { font-size: 0.8rem; color: #999; }
 
         /* VIDEO SECTION */
@@ -596,6 +576,7 @@
             box-shadow: var(--shadow-md);
             max-width: 900px;
             margin: 0 auto;
+            background-color: #000; /* Placeholder cor enquanto carrega */
         }
         .video-wrapper iframe {
             position: absolute;
@@ -631,9 +612,7 @@
             text-align: left;
             transition: var(--transition);
         }
-        .faq-question:hover {
-            color: var(--color-brand-coral);
-        }
+        .faq-question:hover { color: var(--color-brand-coral); }
         .faq-icon {
             font-size: 1.8rem;
             font-weight: 300;
@@ -645,20 +624,23 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.4s ease-out;
+            visibility: hidden; /* Oculto para leitores de tela inicialmente */
         }
         .faq-answer p {
             padding-bottom: 20px;
             color: var(--color-text-light);
             font-size: 1rem;
+            margin: 0;
         }
         .faq-item.active .faq-icon {
             transform: rotate(45deg);
             color: var(--color-text-light);
         }
+        .faq-item.active .faq-answer {
+            visibility: visible; /* Fica visível para o leitor de tela ao expandir */
+        }
 
-        /* ==============================================
-           CTA FINAL E RODAPÉ PROFISSIONAL (TEAL ESCURO)
-           ============================================== */
+        /* CTA FINAL */
         .cta-final {
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
             color: white;
@@ -694,6 +676,7 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.3);
         }
 
+        /* RODAPÉ */
         footer {
             background-color: var(--color-footer);
             color: white;
@@ -706,12 +689,7 @@
             gap: 50px;
             margin-bottom: 50px;
         }
-        .footer-logo { 
-            margin-bottom: 20px; 
-            display: flex; 
-            align-items: center; 
-        }
-
+        .footer-logo { margin-bottom: 20px; display: flex; align-items: center; }
         .footer-logo-img {
             height: 75px; 
             transform: scale(1.25); 
@@ -723,9 +701,7 @@
             filter: brightness(0) invert(1); 
             opacity: 0.9;
         }
-        
         .footer-about { color: #8FBCBC; font-size: 0.95rem; line-height: 1.7; }
-        
         .footer-info h4 { 
             margin-bottom: 25px; 
             font-size: 1.2rem; 
@@ -779,32 +755,11 @@
         }
         .whatsapp-float svg { width: 40px; height: 40px; fill: white; }
 
-        /* ==============================================
-           RESPONSIVIDADE (CELULAR E TABLET)
-           ============================================== */
+        /* RESPONSIVIDADE (CELULAR E TABLET) */
         @media (max-width: 900px) {
-            .header-content {
-                flex-direction: row; 
-                justify-content: space-between;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .logo-img {
-                height: 60px; 
-                transform: scale(1.25); 
-                transform-origin: left center; 
-                margin-top: 10px;
-                margin-bottom: 10px;
-                margin-left: 5px;
-            }
-
-            .header-btn {
-                padding: 8px 14px; 
-                font-size: 0.85rem;
-                white-space: nowrap; 
-            }
-
+            .header-content { flex-direction: row; justify-content: space-between; align-items: center; gap: 10px; }
+            .logo-img { height: 60px; transform: scale(1.25); transform-origin: left center; margin-top: 10px; margin-bottom: 10px; margin-left: 5px; }
+            .header-btn { padding: 8px 14px; font-size: 0.85rem; white-space: nowrap; }
             .hero-grid, .benefits-grid { grid-template-columns: 1fr; }
             .hero { padding: 40px 0 60px 0; text-align: center; }
             .hero-text h1 { font-size: 2.2rem; }
@@ -812,31 +767,14 @@
             .experience-badge { left: -5px; bottom: -15px; padding: 15px; }
             
             /* Ajuste Especialista Mobile */
-            .especialista-footer-grid { 
-                grid-template-columns: 1fr; 
-                gap: 40px; 
-                margin-top: 60px;
-                padding-top: 40px;
-                text-align: left; 
-            }
+            .especialista-footer-grid { grid-template-columns: 1fr; gap: 40px; margin-top: 60px; padding-top: 40px; text-align: left; }
             .especialista-text h2 { font-size: 2.4rem; }
             
             /* Ajuste Destaque About Mobile */
-            .about-content { 
-                grid-template-columns: 1fr; 
-                text-align: center; 
-                border-left: none; 
-                border-top: 8px solid var(--color-brand-coral); 
-                padding: 40px 25px; 
-            }
+            .about-content { grid-template-columns: 1fr; text-align: center; border-left: none; border-top: 8px solid var(--color-brand-coral); padding: 40px 25px; }
             .about-icon svg { width: 70px; height: 70px; }
-            .about-feature {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                gap: 15px;
-            }
-
+            .about-feature { flex-direction: column; align-items: center; text-align: center; gap: 15px; }
+            
             .section-title { font-size: 1.8rem; }
             .cta-final h2 { font-size: 2.2rem; }
             .cta-final { padding: 70px 0; }
@@ -848,9 +786,11 @@
     <!-- HEADER / NOVO LOGO OFICIAL (ALINHADO À ESQUERDA) -->
     <header>
         <div class="container header-content">
-            <div class="logo">
-                <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo" class="logo-img" fetchpriority="high">
-            </div>
+            <!-- Acessibilidade: Logo da Home -->
+            <a href="/" class="logo" aria-label="Ir para a página inicial da Nutrição Contextual">
+                <!-- CLS Fix: Width e Height declarados na imagem -->
+                <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo" class="logo-img" width="160" height="90" fetchpriority="high" decoding="async">
+            </a>
             
             <!-- Link pré-definido para Consulta no Menu -->
             <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Estou%20no%20site%20da%20Nutri%C3%A7%C3%A3o%20Contextual%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn btn-pulse header-btn" target="_blank" rel="noopener">
@@ -859,29 +799,27 @@
         </div>
     </header>
 
-    <!-- HERO SECTION -->
     <main>
+        <!-- HERO SECTION -->
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-text fade-in-section">
                     <div class="crn-badge">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                         Nutricionista Responsável • CRN 6746
                     </div>
                     <h1>Liberte-se das Dietas e Transforme sua Relação com a Comida</h1>
-                    <!-- TEXTO REFINADO BASEADO NA APOSTILA: Flexibilidade psicológica e autonomia -->
                     <p>Descubra o <strong>Método 4F</strong>. Uma abordagem comportamental que promove flexibilidade psicológica para você comer sem culpa, atingir seus objetivos e recuperar a sua autonomia alimentar.</p>
                     
-                    <!-- Link pré-definido para Método 4F -->
                     <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20M%C3%A9todo%204F%20e%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="btn btn-large btn-pulse" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" width="24" height="24" fill="white"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="white" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
                         Falar com a Nutricionista
                     </a>
                 </div>
                 <div class="hero-image-wrapper fade-in-section">
                     <div class="hero-image">
-                        <!-- Imagem local apontada pelo usuário -->
-                        <img src="img/Nutricionista-Porto-Alegre.png" alt="Letícia Christianetti em Porto Alegre - RS" width="500" height="600" fetchpriority="high">
+                        <!-- CLS Fix: Atributos width, height e decoding="async" adicionados -->
+                        <img src="img/Nutricionista-Porto-Alegre.png" alt="Letícia Christianetti em Porto Alegre - RS" width="500" height="600" fetchpriority="high" decoding="async">
                         <div class="experience-badge">
                             <span>17+</span>
                             <span>Anos de<br>Experiência</span>
@@ -899,28 +837,29 @@
                         <p>Com uma abordagem que une ciência e acolhimento, Letícia ajuda mulheres a entenderem que saúde vai muito além do prato. Através da integração entre corpo, mente e intestino, ela guia suas pacientes em uma jornada de autoconhecimento e equilíbrio verdadeiro.</p>
                     </div>
                     
-                    <ul class="especialista-bullets">
-                        <li>
+                    <!-- A11y Fix: Definindo o role="list" para leitores de tela que perdem a semântica com list-style:none -->
+                    <ul class="especialista-bullets" role="list">
+                        <li role="listitem">
                             <div class="bullet-icon">
-                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                             </div>
                             <span>Terapeuta Integrativa de Saúde</span>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <div class="bullet-icon">
-                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                             </div>
                             <span>Nutricionista especialista em Comportamento Alimentar</span>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <div class="bullet-icon">
-                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
                             </div>
                             <span>Especialista em Modulação Intestinal</span>
                         </li>
-                        <li>
+                        <li role="listitem">
                             <div class="bullet-icon">
-                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
                             </div>
                             <span>Criadora de conteúdo sobre Saúde Integrativa</span>
                         </li>
@@ -929,7 +868,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO SOBRE A NUTRIÇÃO CONTEXTUAL (AGORA EM DESTAQUE TOTAL) -->
+        <!-- SEÇÃO SOBRE A NUTRIÇÃO CONTEXTUAL -->
         <section id="sobre">
             <div class="container fade-in-section">
                 <div class="text-center">
@@ -939,7 +878,6 @@
                 
                 <div class="about-content">
                     <div class="about-icon text-center">
-                        <!-- O ícone agora está em coral, brilhando sobre o fundo escuro. Aria-hidden para acessibilidade -->
                         <svg viewBox="0 0 24 24" width="80" height="80" aria-hidden="true">
                             <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M15.5,10.5L14,9L12,11L10,9L8.5,10.5L10.5,12.5L8.5,14.5L10,16L12,14L14,16L15.5,14.5L13.5,12.5L15.5,10.5Z" />
                         </svg>
@@ -949,7 +887,6 @@
                         
                         <div class="about-feature">
                             <div class="about-feature-icon" aria-hidden="true">
-                                <!-- Ícone de Cérebro/Mente representando Psicologia e Comportamento -->
                                 <svg viewBox="0 0 24 24">
                                     <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
                                     <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
@@ -962,7 +899,6 @@
 
                         <div class="about-feature">
                             <div class="about-feature-icon" aria-hidden="true">
-                                <!-- Ícone de Maçã representando a Nutrição sem terrorismo -->
                                 <svg viewBox="0 0 24 24">
                                     <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/>
                                     <path d="M10 2c1 .5 2 2 2 5"/>
@@ -978,7 +914,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO OS 4 PILARES DO MÉTODO 4F (ZEBRA-STRIPING: Fundo Verde Claro) -->
+        <!-- SEÇÃO OS 4 PILARES DO MÉTODO 4F -->
         <section id="metodo" class="bg-alt">
             <div class="container fade-in-section">
                 <div class="text-center">
@@ -987,37 +923,33 @@
                 </div>
 
                 <div class="pillars-grid">
-                    <!-- Pilar 1 -->
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>
                         </div>
                         <h3>FOCO</h3>
                         <p>Aumento do autoconhecimento e atenção plena no momento presente (Mindful Eating). Você aprende a identificar com clareza os sinais reais de fome e saciedade corporal.</p>
                     </div>
                     
-                    <!-- Pilar 2 -->
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.46-.32-.9-.59-1.34-.77l-.53-.22-.38-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7.17 7.17 0 00-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.31.77l.53.22.38 2.55zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.46-.32-.9-.59-1.34-.77l-.53-.22-.38-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7.17 7.17 0 00-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.31.77l.53.22.38 2.55zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
                         </div>
                         <h3>FUNÇÃO</h3>
                         <p>Notar a função do comportamento. Compreendemos se a escolha alimentar está congruente aos seus <strong>valores de vida</strong> ou se atua como uma fuga emocional (comer emocional disfuncional).</p>
                     </div>
 
-                    <!-- Pilar 3 -->
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
                         </div>
                         <h3>FREQUÊNCIA</h3>
                         <p>Desenvolvimento da autonomia. Você aprende a quebrar a "dicotomia alimentar" (alimentos permitidos vs proibidos) equilibrando a qualidade e a frequência alimentar de forma realista.</p>
                     </div>
 
-                    <!-- Pilar 4 -->
                     <div class="pillar-card">
                         <div class="pillar-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M22 21H2V19H22V21M15.47 17.5H8.53C8.21 17.5 7.9 17.37 7.68 17.15C7.45 16.92 7.32 16.61 7.32 16.3V14H16.68V16.3C16.68 16.61 16.55 16.92 16.32 17.15C16.1 17.37 15.79 17.5 15.47 17.5M12 2.5C14.76 2.5 17 4.74 17 7.5H7C7 4.74 9.24 2.5 12 2.5Z"/></svg>
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor" aria-hidden="true"><path d="M22 21H2V19H22V21M15.47 17.5H8.53C8.21 17.5 7.9 17.37 7.68 17.15C7.45 16.92 7.32 16.61 7.32 16.3V14H16.68V16.3C16.68 16.61 16.55 16.92 16.32 17.15C16.1 17.37 15.79 17.5 15.47 17.5M12 2.5C14.76 2.5 17 4.74 17 7.5H7C7 4.74 9.24 2.5 12 2.5Z"/></svg>
                         </div>
                         <h3>FARTURA</h3>
                         <p>Mudar a mente da restrição para a fartura de nutrientes e opções. Aprenda a escolher as quantidades de forma congruente com a saciedade do seu corpo, prevenindo episódios de compulsão.</p>
@@ -1026,33 +958,32 @@
             </div>
         </section>
 
-        <!-- BENEFÍCIOS (ZEBRA-STRIPING: Fundo Branco) -->
+        <!-- BENEFÍCIOS -->
         <section>
             <div class="container benefits-grid fade-in-section">
                 <div class="benefits-text">
                     <h2 class="section-title">O que você ganha ao iniciar o tratamento?</h2>
                     <p style="margin-bottom: 20px; color: var(--color-text-light);">Ao adotar o Método 4F e focar no seu comportamento, as mudanças vão muito além da balança.</p>
                     
-                    <ul class="benefits-list">
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    <ul class="benefits-list" role="list">
+                        <li role="listitem">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                             Total autonomia da sua alimentação em qualquer ambiente.
                         </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <li role="listitem">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                             Redução drástica dos episódios de compulsão alimentar e culpa.
                         </li>
-                        <!-- TEXTO REFINADO BASEADO NA APOSTILA: Tolerância ao Mal-estar e Escala da Fome e Saciedade -->
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <li role="listitem">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                             Desenvolvimento de Habilidades Práticas (TIP) para aumentar a tolerância ao mal-estar e frear impulsos.
                         </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <li role="listitem">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                             Domínio prático da Escala da Fome e Saciedade para nutrir o seu corpo com mais consciência corporal.
                         </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                        <li role="listitem">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                             Aumento da flexibilidade psicológica, conquistando resultados estéticos sustentáveis, sem efeito sanfona.
                         </li>
                     </ul>
@@ -1062,13 +993,13 @@
                     <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Vi%20os%20benef%C3%ADcios%20do%20M%C3%A9todo%204F%20e%20quero%20iniciar%20meu%20tratamento." class="btn btn-pulse" target="_blank" rel="noopener">Agendar sua consulta agora</a>
                 </div>
                 <div class="benefits-image text-center">
-                    <!-- Imagem otimizada (Lazy Load) -->
-                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Alimentação equilibrada e abundante" style="border-radius: var(--border-radius); box-shadow: var(--shadow-md);" loading="lazy" width="600" height="400">
+                    <!-- CLS Fix e Lazy Load -->
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80" alt="Alimentação equilibrada e abundante" style="border-radius: var(--border-radius); box-shadow: var(--shadow-md);" loading="lazy" width="600" height="400" decoding="async">
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO DE VÍDEO (ZEBRA-STRIPING: Fundo Verde Claro) -->
+        <!-- SEÇÃO DE VÍDEO -->
         <section class="bg-alt">
             <div class="container fade-in-section">
                 <div class="text-center">
@@ -1077,13 +1008,13 @@
                 </div>
                 
                 <div class="video-wrapper">
-                    <!-- Iframe do YouTube (Substitua o ID do vídeo) com lazy load -->
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Explicativo Método 4F" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                    <!-- Iframe do YouTube com Lazy Load -->
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Explicativo Método 4F" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" width="560" height="315"></iframe>
                 </div>
             </div>
         </section>
 
-        <!-- PROVA SOCIAL (ZEBRA-STRIPING: Fundo Branco) -->
+        <!-- PROVA SOCIAL -->
         <section>
             <div class="container fade-in-section">
                 <div class="text-center">
@@ -1094,11 +1025,10 @@
                 <div class="reviews-grid">
                     <!-- Depoimento 1 -->
                     <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="stars" aria-label="5 estrelas">⭐⭐⭐⭐⭐</div>
                         <p class="review-text">"Pela primeira vez em anos eu perdi o medo de comer. O Método 4F mudou completamente minha cabeça. Emagreci 8kg sem sentir que estava de dieta."</p>
                         <div class="reviewer">
-                            <!-- Placeholder de foto com lazy load -->
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Foto Paciente Mariana" loading="lazy" width="50" height="50">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80" alt="Foto Paciente Mariana" loading="lazy" width="50" height="50" decoding="async">
                             <div class="reviewer-info">
                                 <h4>Mariana S.</h4>
                                 <span>Paciente de Porto Alegre, RS</span>
@@ -1108,10 +1038,10 @@
 
                     <!-- Depoimento 2 -->
                     <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="stars" aria-label="5 estrelas">⭐⭐⭐⭐⭐</div>
                         <p class="review-text">"A melhor nutri! A consulta não é só sobre o cardápio, é sobre a sua vida. Entender minha relação emocional com o doce curou minha compulsão."</p>
                         <div class="reviewer">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Foto Paciente Carlos" loading="lazy" width="50" height="50">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Foto Paciente Carlos" loading="lazy" width="50" height="50" decoding="async">
                             <div class="reviewer-info">
                                 <h4>Carlos T.</h4>
                                 <span>Paciente Online</span>
@@ -1121,10 +1051,10 @@
 
                     <!-- Depoimento 3 -->
                     <div class="review-card">
-                        <div class="stars">⭐⭐⭐⭐⭐</div>
+                        <div class="stars" aria-label="5 estrelas">⭐⭐⭐⭐⭐</div>
                         <p class="review-text">"17 anos de experiência fazem a diferença. Senti confiança desde o primeiro contato no WhatsApp. A abordagem comportamental é libertadora."</p>
                         <div class="reviewer">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Foto Paciente Fernanda" loading="lazy" width="50" height="50">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&q=80" alt="Foto Paciente Fernanda" loading="lazy" width="50" height="50" decoding="async">
                             <div class="reviewer-info">
                                 <h4>Fernanda M.</h4>
                                 <span>Paciente de Porto Alegre, RS</span>
@@ -1135,7 +1065,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO FAQ (ZEBRA-STRIPING: Fundo Verde Claro) -->
+        <!-- SEÇÃO FAQ (DÚVIDAS FREQUENTES - A11y Aplicado) -->
         <section id="faq" class="bg-alt">
             <div class="container fade-in-section">
                 <div class="text-center">
@@ -1146,44 +1076,44 @@
                 <div class="faq-container">
                     <!-- Pergunta 1 -->
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
                             Vou receber um cardápio altamente restritivo?
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-answer-1">
                             <p>Não. A base da Nutrição Contextual é combater a "mentalidade de dieta" e o terrorismo nutricional. Vamos construir juntos uma rotina alimentar que respeite suas preferências, honre a sua fome e não exclua do nada os alimentos que você gosta. O objetivo é autonomia alimentar, não restrição.</p>
                         </div>
                     </div>
 
                     <!-- Pergunta 2 -->
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
                             Como o método ajuda nos episódios de compulsão alimentar?
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-answer-2">
                             <p>Diferente de apenas focar na "força de vontade", o Método 4F atua na raiz do problema. Utilizamos a avaliação da Função da comida (para que você está comendo?) e treinamos Habilidades TIP e de Mindful Eating (comer consciente). Isso ajuda você a notar a emoção antes do impulso, reduzindo e controlando os episódios de compulsão sem sofrimento.</p>
                         </div>
                     </div>
 
                     <!-- Pergunta 3 -->
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
                             Vou precisar cortar carboidratos e doces para emagrecer?
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-answer-3">
                             <p>Definitivamente não. Trabalhamos contra a dicotomia alimentar (a ideia de que existem alimentos "bons" e "ruins"). Você vai aprender sobre a Frequência e a Fartura, entendendo como equilibrar o índice glicêmico das suas refeições para ter mais saciedade e energia, sem precisar banir os carboidratos ou os doces da sua vida.</p>
                         </div>
                     </div>
 
                     <!-- Pergunta 4 -->
                     <div class="faq-item">
-                        <button class="faq-question">
+                        <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
                             O acompanhamento é feito online ou apenas presencial?
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
                         </button>
-                        <div class="faq-answer">
+                        <div class="faq-answer" id="faq-answer-4">
                             <p>Realizamos atendimentos nos dois formatos. Se você for de Porto Alegre (RS) ou região, podemos fazer os encontros presenciais. Se você morar em outra cidade ou preferir o conforto de casa, o atendimento online tem a mesma profundidade, acolhimento e resultados práticos.</p>
                         </div>
                     </div>
@@ -1197,29 +1127,27 @@
                 <h2>Dê o primeiro passo para a sua liberdade alimentar</h2>
                 <p>Agende sua avaliação agora mesmo via WhatsApp. Vagas limitadas para acompanhamento.</p>
                 
-                <!-- Link pré-definido para CTA Final -->
                 <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Quero%20dar%20o%20primeiro%20passo%20para%20minha%20liberdade%20alimentar.%20Como%20funciona%20o%20acompanhamento%3F" class="btn btn-large btn-cta-alt" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--color-accent)" style="margin-right: 8px;"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
+                    <svg viewBox="0 0 24 24" width="24" height="24" fill="var(--color-accent)" style="margin-right: 8px;" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
                     Falar via WhatsApp
                 </a>
             </div>
         </section>
     </main>
 
-    <!-- RODAPÉ (SEO FOCADO) -->
+    <!-- RODAPÉ -->
     <footer>
         <div class="container">
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <!-- O Logo original tem texto escuro. O filter abaixo transforma ele em branco puro para o rodapé E dar o ZOOM correto -->
-                        <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo" class="footer-logo-img" loading="lazy">
+                        <!-- CLS Fix: Width e Height declarados -->
+                        <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo Branco" class="footer-logo-img" loading="lazy" width="160" height="90" decoding="async">
                     </div>
                     <p class="footer-about">Referência em Nutrição Comportamental e Emagrecimento Sustentável há 17 anos.</p>
                 </div>
                 <div class="footer-info">
                     <h4>Contato</h4>
-                    <!-- Link pré-definido para Rodapé -->
                     <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20minha%20alimenta%C3%A7%C3%A3o%2C%20podemos%20conversar%3F" target="_blank" rel="noopener">WhatsApp: (51) 99316-0254</a>
                     <p>Atendimento Online e Presencial</p>
                 </div>
@@ -1240,10 +1168,9 @@
         </div>
     </footer>
 
-    <!-- BOTÃO WHATSAPP FLUTUANTE COM PULSO -->
-    <!-- Link pré-definido para Botão Flutuante -->
+    <!-- BOTÃO WHATSAPP FLUTUANTE -->
     <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Preciso%20de%20ajuda%20com%20minha%20alimenta%C3%A7%C3%A3o%2C%20podemos%20conversar%3F" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar conosco pelo WhatsApp">
-        <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z"/></svg>
     </a>
 
     <!-- JAVASCRIPT OTIMIZADO -->
@@ -1266,30 +1193,32 @@
 
             faders.forEach(fader => appearOnScroll.observe(fader));
             
-            // 2. SISTEMA SANFONA (ACCORDION) PARA A SEÇÃO FAQ
+            // 2. SISTEMA SANFONA (ACCORDION) PARA A SEÇÃO FAQ - COM ARIA ACESSIBILIDADE
             const faqQuestions = document.querySelectorAll('.faq-question');
             
             faqQuestions.forEach(question => {
                 question.addEventListener('click', () => {
                     const item = question.parentElement;
                     const isActive = item.classList.contains('active');
+                    const answer = question.nextElementSibling;
                     
-                    // Fecha todas as outras abas para manter a página limpa
+                    // Fecha todas as abas e ajusta ARIA tags
                     document.querySelectorAll('.faq-item').forEach(otherItem => {
                         otherItem.classList.remove('active');
                         otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                        otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
                     });
 
-                    // Se não estava ativa antes do clique, abre a aba atual
+                    // Se não estava ativa antes, abre e avisa leitores de tela
                     if (!isActive) {
                         item.classList.add('active');
-                        const answer = question.nextElementSibling;
-                        answer.style.maxHeight = answer.scrollHeight + "px"; // Expande suavemente de acordo com o texto
+                        answer.style.maxHeight = answer.scrollHeight + "px"; 
+                        question.setAttribute('aria-expanded', 'true');
                     }
                 });
             });
 
-            console.log("Nutrição Contextual: Landing Page Otimizada com Especialista e Zebra Striping! 🚀");
+            console.log("Nutrição Contextual: Landing Page 100% Otimizada (PageSpeed + Acessibilidade) Carregada com Sucesso! 🚀");
         });
     </script>
 </body>
