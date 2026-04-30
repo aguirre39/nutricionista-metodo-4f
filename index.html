@@ -9,7 +9,7 @@
     <title>Nutrição Contextual | Nutricionista Comportamental em Porto Alegre</title>
     <meta name="description" content="Nutricionista Comportamental (CRN 6746) em Porto Alegre, RS. Liberte-se das dietas restritivas com o Método 4F. Há 17 anos ajudando pessoas a recuperarem o equilíbrio alimentar.">
     <meta name="keywords" content="nutricionista porto alegre, nutrição comportamental, método 4f, comer intuitivo, mindful eating, compulsão alimentar, emagrecimento saudável">
-    <meta name="author" content="Nutrição Contextual">
+    <meta name="author" content="Letícia Christianetti">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://seusite.com.br">
 
@@ -24,7 +24,12 @@
     <!-- PRÉ-CONEXÕES (PAGESPEED) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- FAVICON E APP ICONS (SEO E BRANDING) -->
+    <link rel="icon" href="img/Logo-nutricao.png" type="image/png">
+    <link rel="shortcut icon" href="img/Logo-nutricao.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/Logo-nutricao.png">
 
     <!-- SCHEMA MARKUP (LOCAL BUSINESS / MEDICAL) -->
     <script type="application/ld+json">
@@ -32,11 +37,11 @@
       "@context": "https://schema.org",
       "@type": "HealthAndBeautyBusiness",
       "name": "Nutrição Contextual",
-      "image": "https://seusite.com.br/img/Nutricionista-Porto-Alegre.png",
+      "image": "https://seusite.com.br/img/Logo-nutricao.png",
       "@id": "https://seusite.com.br",
       "url": "https://seusite.com.br",
       "telephone": "+5551993160254",
-      "taxID": "51.288.533/0001-51",
+      "taxID": "38.158.741/0001-78",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Padre Cacique, 122 - Sala 402 - Praia de Belas",
@@ -47,15 +52,15 @@
       },
       "founder": {
         "@type": "Person",
-        "name": "Nutricionista Responsável",
-        "jobTitle": "Nutricionista Comportamental",
+        "name": "Letícia Christianetti",
+        "jobTitle": "Nutricionista Comportamental e Terapeuta Integrativa",
         "identifier": {
           "@type": "PropertyValue",
           "name": "CRN",
           "value": "6746"
         }
       },
-      "description": "Serviço de Nutrição Comportamental com 17 anos de experiência. Profissional registrada sob o CRN 6746, utilizando o Método 4F, Terapia de Aceitação e Compromisso e Mindful Eating.",
+      "description": "Serviço de Nutrição Comportamental com Letícia Christianetti. Profissional registrada sob o CRN 6746, utilizando o Método 4F, Terapia de Aceitação e Compromisso e Mindful Eating.",
       "priceRange": "$$"
     }
     </script>
@@ -104,25 +109,37 @@
 
     <style>
         /* ==================================================================
-           CSS PURO OTIMIZADO - DESIGN SYSTEM E VARIÁVEIS
+           CSS PURO OTIMIZADO - NOVA IDENTIDADE VISUAL BASEADA NO LOGO
            ================================================================== */
         :root {
-            --color-primary: #2E7D32;         /* Verde escuro confiável */
-            --color-primary-dark: #1B5E20;    /* Verde mais fechado e elegante */
-            --color-footer: #113614;          /* Verde quase preto para o rodapé */
-            --color-primary-light: #4CAF50;
-            --color-secondary: #E8F5E9;       /* Verde muito claro para fundos */
-            --color-accent: #25D366;          /* Verde WhatsApp para CTAs */
-            --color-accent-hover: #128C7E;
-            --color-text: #333333;
-            --color-text-light: #666666;
+            /* CORES PRINCIPAIS (Extraídas do Cérebro/Nutrição) */
+            --color-primary: #266768;         /* Teal Elegante */
+            --color-primary-dark: #164344;    /* Teal Escuro para gradientes e CTA */
+            --color-primary-light: #3A8889;   /* Teal Claro */
+            --color-footer: #0D2B2C;          /* Teal super escuro para o rodapé */
+            
+            /* CORES DE DESTAQUE E ACOLHIMENTO (Extraídas da Flor/Contextual) */
+            --color-brand-coral: #D97B65;     /* Coral / Terracota */
+            --color-brand-coral-light: #FDF1EE; /* Fundo suave coral */
+            --color-brand-coral-dark: #BA624D;
+            
+            /* CORES DE FUNDO */
+            --color-secondary: #F0F7F7;       /* Fundo suave teal */
             --color-bg: #FFFFFF;
-            --color-bg-alt: #F9FBF9;
+            --color-bg-alt: #FAFCFC;          /* Fundo alternativo muito leve */
+            
+            /* CORES FUNCIONAIS (Mantido para Conversão/CRO) */
+            --color-accent: #25D366;          /* Verde WhatsApp (INTOCÁVEL PARA CRO) */
+            --color-accent-hover: #128C7E;
+            
+            /* TIPOGRAFIA E ESTRUTURA */
+            --color-text: #333333;
+            --color-text-light: #5A6D6D;
             --font-main: 'Inter', sans-serif;
             --transition: all 0.3s ease;
             --border-radius: 12px;
-            --shadow-sm: 0 4px 6px rgba(0,0,0,0.05);
-            --shadow-md: 0 10px 20px rgba(0,0,0,0.08);
+            --shadow-sm: 0 4px 6px rgba(38,103,104,0.05);
+            --shadow-md: 0 10px 20px rgba(38,103,104,0.08);
         }
 
         /* RESET OTIMIZADO */
@@ -198,6 +215,12 @@
             box-shadow: 0 8px 25px rgba(18, 140, 126, 0.4);
         }
         .btn-large { padding: 20px 40px; font-size: 1.2rem; }
+        
+        /* Modificador de botão do cabeçalho */
+        .header-btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
 
         /* ANIMAÇÕES (Scroll Fade) */
         .fade-in-section {
@@ -211,10 +234,12 @@
             transform: none;
         }
 
-        /* HEADER & LOGO DESLUMBRANTE */
+        /* =========================================================
+           CABEÇALHO
+           ========================================================= */
         header {
             background-color: var(--color-bg);
-            padding: 20px 0;
+            padding: 15px 0;
             box-shadow: var(--shadow-sm);
             position: sticky;
             top: 0;
@@ -228,21 +253,17 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 12px;
-            font-size: 1.8rem;
-            font-weight: 900;
-            letter-spacing: -0.8px;
         }
-        .logo-text {
-            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .logo svg { 
-            width: 38px; 
-            height: 38px; 
-            filter: drop-shadow(2px 4px 4px rgba(27, 94, 32, 0.3));
+        .logo-img {
+            height: 90px; 
+            transform: scale(1.3); 
+            transform-origin: left center; 
+            margin-top: 15px; 
+            margin-bottom: 15px;
+            margin-left: 10px;
+            width: auto;
+            object-fit: contain;
+            transition: var(--transition);
         }
 
         /* HERO SECTION */
@@ -264,17 +285,17 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background-color: var(--color-secondary);
-            color: var(--color-primary-dark);
+            background-color: var(--color-brand-coral-light);
+            color: var(--color-brand-coral-dark);
             padding: 6px 14px;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: 700;
             margin-bottom: 20px;
-            border: 1px solid var(--color-primary-light);
+            border: 1px solid rgba(217, 123, 101, 0.3);
             letter-spacing: 0.5px;
         }
-        .crn-badge svg { width: 16px; height: 16px; fill: var(--color-primary); }
+        .crn-badge svg { width: 16px; height: 16px; fill: var(--color-brand-coral); }
 
         .hero-text h1 {
             font-size: 3rem;
@@ -305,15 +326,16 @@
             height: auto;
             display: block;
         }
+        /* BADGE DE EXPERIÊNCIA */
         .experience-badge {
             position: absolute;
             bottom: -25px;
             left: -25px;
-            background-color: var(--color-primary);
+            background-color: var(--color-brand-coral);
             color: white;
             padding: 20px 25px;
             border-radius: 12px;
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 10px 20px rgba(217, 123, 101, 0.3);
             font-weight: 700;
             display: flex;
             flex-direction: column;
@@ -327,6 +349,64 @@
         section { padding: 80px 0; }
         .bg-alt { background-color: var(--color-bg-alt); }
 
+        /* =========================================================
+           SOBRE A ESPECIALISTA (Integrado na Hero)
+           ========================================================= */
+        .especialista-footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 80px;
+            padding-top: 60px;
+            border-top: 1px solid rgba(38,103,104,0.1);
+        }
+        .pre-title {
+            color: var(--color-primary-light);
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .especialista-text h2 {
+            font-size: 2.8rem;
+            color: var(--color-primary-dark);
+            margin-bottom: 20px;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        .especialista-text p {
+            font-size: 1.15rem;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+        .especialista-bullets {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .especialista-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+        .bullet-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--color-primary);
+        }
+
         /* MÉTODO 4F & ABOUT */
         .about-content {
             display: grid;
@@ -337,7 +417,7 @@
             padding: 40px;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-sm);
-            border-left: 5px solid var(--color-primary);
+            border-left: 5px solid var(--color-brand-coral);
         }
         .about-text h3 { color: var(--color-primary); margin-bottom: 15px; font-size: 1.5rem; }
 
@@ -360,7 +440,7 @@
         .pillar-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-md);
-            border-color: var(--color-primary-light);
+            border-color: var(--color-brand-coral);
         }
         .pillar-icon {
             width: 64px;
@@ -371,7 +451,7 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 20px auto;
-            color: var(--color-primary);
+            color: var(--color-brand-coral);
         }
         .pillar-card h3 { font-size: 1.3rem; margin-bottom: 10px; color: var(--color-primary); }
         .pillar-card p { font-size: 0.95rem; color: var(--color-text-light); }
@@ -394,7 +474,7 @@
             flex-shrink: 0;
             width: 24px;
             height: 24px;
-            fill: var(--color-primary-light);
+            fill: var(--color-brand-coral);
             margin-top: 3px;
         }
 
@@ -463,12 +543,13 @@
             transition: var(--transition);
         }
         .faq-question:hover {
-            color: var(--color-primary-light);
+            color: var(--color-brand-coral);
         }
         .faq-icon {
             font-size: 1.8rem;
             font-weight: 300;
             line-height: 1;
+            color: var(--color-brand-coral);
             transition: transform 0.3s ease;
         }
         .faq-answer {
@@ -487,7 +568,7 @@
         }
 
         /* ==============================================
-           CTA FINAL E RODAPÉ PROFISSIONAL
+           CTA FINAL E RODAPÉ PROFISSIONAL (TEAL ESCURO)
            ============================================== */
         .cta-final {
             background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
@@ -495,6 +576,7 @@
             text-align: center;
             padding: 100px 0;
             position: relative;
+            overflow: hidden;
         }
         .cta-final h2 {
             font-size: 2.8rem;
@@ -527,6 +609,7 @@
             background-color: var(--color-footer);
             color: white;
             padding: 80px 0 25px 0;
+            overflow: hidden;
         }
         .footer-grid {
             display: grid;
@@ -535,26 +618,33 @@
             margin-bottom: 50px;
         }
         .footer-logo { 
-            font-size: 1.6rem; 
-            font-weight: 900; 
             margin-bottom: 20px; 
             display: flex; 
             align-items: center; 
-            gap: 10px;
-            color: white;
         }
-        .footer-logo svg { filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5)); }
+
+        .footer-logo-img {
+            height: 75px; 
+            transform: scale(1.25); 
+            transform-origin: left center;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            width: auto;
+            object-fit: contain;
+            filter: brightness(0) invert(1); 
+            opacity: 0.9;
+        }
         
-        .footer-about { color: #a4cfa7; font-size: 0.95rem; line-height: 1.7; }
+        .footer-about { color: #8FBCBC; font-size: 0.95rem; line-height: 1.7; }
         
         .footer-info h4 { 
             margin-bottom: 25px; 
             font-size: 1.2rem; 
-            color: var(--color-primary-light);
+            color: var(--color-brand-coral-light);
             font-weight: 700;
         }
         .footer-info p, .footer-info a { 
-            color: #a4cfa7; 
+            color: #8FBCBC; 
             margin-bottom: 15px; 
             display: block;
             transition: var(--transition);
@@ -569,7 +659,7 @@
             text-align: center;
             padding-top: 25px;
             border-top: 1px solid rgba(255,255,255,0.05);
-            color: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.4);
             font-size: 0.85rem;
         }
 
@@ -600,14 +690,49 @@
         }
         .whatsapp-float svg { width: 40px; height: 40px; fill: white; }
 
-        /* RESPONSIVIDADE */
+        /* ==============================================
+           RESPONSIVIDADE (CELULAR E TABLET)
+           ============================================== */
         @media (max-width: 900px) {
+            .header-content {
+                flex-direction: row; 
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .logo-img {
+                height: 60px; 
+                transform: scale(1.25); 
+                transform-origin: left center; 
+                margin-top: 10px;
+                margin-bottom: 10px;
+                margin-left: 5px;
+            }
+
+            .header-btn {
+                padding: 8px 14px; 
+                font-size: 0.85rem;
+                white-space: nowrap; 
+            }
+
             .hero-grid, .about-content, .benefits-grid { grid-template-columns: 1fr; }
             .hero { padding: 40px 0 60px 0; text-align: center; }
             .hero-text h1 { font-size: 2.2rem; }
             .hero-image-wrapper { justify-content: center; margin-top: 30px; padding: 0 15px; }
             .experience-badge { left: -5px; bottom: -15px; padding: 15px; }
-            .about-content { text-align: center; border-left: none; border-top: 5px solid var(--color-primary); }
+            
+            /* Ajuste Especialista Mobile (Integrado na Hero) */
+            .especialista-footer-grid { 
+                grid-template-columns: 1fr; 
+                gap: 40px; 
+                margin-top: 60px;
+                padding-top: 40px;
+                text-align: left; 
+            }
+            .especialista-text h2 { font-size: 2.4rem; }
+            
+            .about-content { text-align: center; border-left: none; border-top: 5px solid var(--color-brand-coral); }
             .section-title { font-size: 1.8rem; }
             .cta-final h2 { font-size: 2.2rem; }
             .cta-final { padding: 70px 0; }
@@ -616,25 +741,15 @@
 </head>
 <body>
 
-    <!-- HEADER / LOGO DESLUMBRANTE -->
+    <!-- HEADER / NOVO LOGO OFICIAL (ALINHADO À ESQUERDA) -->
     <header>
         <div class="container header-content">
             <div class="logo">
-                <!-- Ícone da folha com gradiente integrado -->
-                <svg viewBox="0 0 24 24">
-                    <defs>
-                        <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#4CAF50" />
-                            <stop offset="100%" stop-color="#1B5E20" />
-                        </linearGradient>
-                    </defs>
-                    <path fill="url(#leafGradient)" d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.05,10.5 7.05,10.5C7.05,10.5 12,8 17,8Z" />
-                </svg>
-                <span class="logo-text">Nutrição Contextual</span>
+                <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo" class="logo-img" fetchpriority="high">
             </div>
             
             <!-- Link pré-definido para Consulta no Menu -->
-            <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Estou%20no%20site%20da%20Nutri%C3%A7%C3%A3o%20Contextual%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn btn-pulse" style="padding: 10px 20px; font-size: 0.9rem;" target="_blank" rel="noopener">
+            <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Estou%20no%20site%20da%20Nutri%C3%A7%C3%A3o%20Contextual%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn btn-pulse header-btn" target="_blank" rel="noopener">
                 Agendar Consulta
             </a>
         </div>
@@ -650,7 +765,8 @@
                         Nutricionista Responsável • CRN 6746
                     </div>
                     <h1>Liberte-se das Dietas e Transforme sua Relação com a Comida</h1>
-                    <p>Descubra o <strong>Método 4F</strong>. Uma abordagem comportamental que permite você comer sem culpa, atingir seus objetivos e recuperar o equilíbrio físico e emocional.</p>
+                    <!-- TEXTO REFINADO BASEADO NA APOSTILA: Flexibilidade psicológica e autonomia -->
+                    <p>Descubra o <strong>Método 4F</strong>. Uma abordagem comportamental que promove flexibilidade psicológica para você comer sem culpa, atingir seus objetivos e recuperar a sua autonomia alimentar.</p>
                     
                     <!-- Link pré-definido para Método 4F -->
                     <a href="https://wa.me/5551993160254?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20M%C3%A9todo%204F%20e%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="btn btn-large btn-pulse" target="_blank" rel="noopener">
@@ -661,7 +777,7 @@
                 <div class="hero-image-wrapper fade-in-section">
                     <div class="hero-image">
                         <!-- Imagem local apontada pelo usuário -->
-                        <img src="img/Nutricionista-Porto-Alegre.png" alt="Nutricionista em Porto Alegre - RS" width="500" height="600" fetchpriority="high">
+                        <img src="img/Nutricionista-Porto-Alegre.png" alt="Letícia Christianetti em Porto Alegre - RS" width="500" height="600" fetchpriority="high">
                         <div class="experience-badge">
                             <span>17+</span>
                             <span>Anos de<br>Experiência</span>
@@ -669,10 +785,48 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- INFO DA ESPECIALISTA FUNDIDA NA HERO SECTION -->
+            <div class="container fade-in-section">
+                <div class="especialista-footer-grid">
+                    <div class="especialista-text">
+                        <span class="pre-title">SOBRE A ESPECIALISTA</span>
+                        <h2>Letícia Christianetti</h2>
+                        <p>Com uma abordagem que une ciência e acolhimento, Letícia ajuda mulheres a entenderem que saúde vai muito além do prato. Através da integração entre corpo, mente e intestino, ela guia suas pacientes em uma jornada de autoconhecimento e equilíbrio verdadeiro.</p>
+                    </div>
+                    
+                    <ul class="especialista-bullets">
+                        <li>
+                            <div class="bullet-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                            </div>
+                            <span>Terapeuta Integrativa de Saúde</span>
+                        </li>
+                        <li>
+                            <div class="bullet-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            </div>
+                            <span>Nutricionista especialista em Comportamento Alimentar</span>
+                        </li>
+                        <li>
+                            <div class="bullet-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg>
+                            </div>
+                            <span>Especialista em Modulação Intestinal</span>
+                        </li>
+                        <li>
+                            <div class="bullet-icon">
+                                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            </div>
+                            <span>Criadora de conteúdo sobre Saúde Integrativa</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <!-- SEÇÃO SOBRE A NUTRIÇÃO CONTEXTUAL -->
-        <section id="sobre" class="bg-alt">
+        <!-- SEÇÃO SOBRE A NUTRIÇÃO CONTEXTUAL (ZEBRA-STRIPING: Fundo Branco) -->
+        <section id="sobre">
             <div class="container fade-in-section">
                 <div class="text-center">
                     <h2 class="section-title">Muito além do "Pode ou Não Pode"</h2>
@@ -687,7 +841,8 @@
                     </div>
                     <div class="about-text">
                         <h3>O que é a Nutrição Contextual?</h3>
-                        <p>Fundamentado nas <strong>Terapias Comportamentais Contextuais (ACT e DBT)</strong> e nas práticas de <strong>Mindful e Intuitive Eating</strong>, o método tem como objetivo desenvolver a flexibilidade psicológica para a mudança do comportamento alimentar.</p>
+                        <!-- TEXTO REFINADO BASEADO NA APOSTILA: Entrevista Motivacional incluída -->
+                        <p>Fundamentado nas <strong>Terapias Comportamentais Contextuais (ACT e DBT)</strong>, na <strong>Entrevista Motivacional</strong> e nas práticas de <strong>Mindful e Intuitive Eating</strong>, o método tem como objetivo desenvolver a flexibilidade psicológica para a mudança do comportamento alimentar.</p>
                         <br>
                         <p>Diferente das dietas que focam apenas na restrição, nós entendemos que o problema não é a comida, mas a forma como você se relaciona com ela. Tratamos a raiz da compulsão devolvendo a sua autonomia alimentar através do <strong>Método 4F</strong>.</p>
                     </div>
@@ -695,8 +850,8 @@
             </div>
         </section>
 
-        <!-- SEÇÃO OS 4 PILARES DO MÉTODO 4F -->
-        <section id="metodo">
+        <!-- SEÇÃO OS 4 PILARES DO MÉTODO 4F (ZEBRA-STRIPING: Fundo Verde Claro) -->
+        <section id="metodo" class="bg-alt">
             <div class="container fade-in-section">
                 <div class="text-center">
                     <h2 class="section-title">O Método 4F</h2>
@@ -719,7 +874,7 @@
                             <svg viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M13.85 22.25h-3.7c-.74 0-1.36-.54-1.45-1.27l-.27-1.89c-.27-.14-.53-.29-.79-.46l-1.8.72c-.7.26-1.47-.03-1.81-.65L2.2 15.53c-.35-.66-.2-1.44.36-1.88l1.53-1.19c-.01-.15-.02-.3-.02-.46 0-.15.01-.31.02-.46l-1.52-1.19c-.59-.45-.74-1.26-.37-1.88l1.85-3.19c.34-.62 1.11-.9 1.79-.63l1.81.73c.26-.17.52-.32.78-.46l.27-1.91c.09-.7.71-1.25 1.44-1.25h3.7c.74 0 1.36.54 1.45 1.27l.27 1.89c.27.14.53.29.79.46l1.8-.72c.71-.26 1.48.03 1.82.65l1.84 3.18c.36.66.2 1.44-.36 1.88l-1.52 1.19c.01.15.02.3.02.46s-.01.31-.02.46l1.52 1.19c.56.45.72 1.23.37 1.86l-1.86 3.22c-.34.62-1.11.9-1.8.63l-1.8-.72c-.26.17-.52.32-.78.46l-.27 1.91c-.1.68-.72 1.22-1.46 1.22zm-3.23-2h2.76l.37-2.55.53-.22c.44-.18.88-.44 1.34-.78l.45-.34 2.38.96 1.38-2.4-2.03-1.58.07-.56c.03-.26.06-.51.06-.78s-.03-.53-.06-.78l-.07-.56 2.03-1.58-1.39-2.4-2.39.96-.45-.35c-.46-.32-.9-.59-1.34-.77l-.53-.22-.38-2.55h-2.76l-.37 2.55-.53.21c-.44.19-.88.44-1.34.79l-.45.33-2.38-.95-1.39 2.39 2.03 1.58-.07.56a7.17 7.17 0 00-.06.79c0 .26.02.53.06.78l.07.56-2.03 1.58 1.38 2.4 2.39-.96.45.35c.43.33.86.58 1.31.77l.53.22.38 2.55zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
                         </div>
                         <h3>FUNÇÃO</h3>
-                        <p>Notar a função do comportamento. Compreendemos se a escolha alimentar está congruente aos seus <strong>valores</strong> ou se atua como uma fuga emocional (comer emocional disfuncional).</p>
+                        <p>Notar a função do comportamento. Compreendemos se a escolha alimentar está congruente aos seus <strong>valores de vida</strong> ou se atua como uma fuga emocional (comer emocional disfuncional).</p>
                     </div>
 
                     <!-- Pilar 3 -->
@@ -743,8 +898,8 @@
             </div>
         </section>
 
-        <!-- BENEFÍCIOS -->
-        <section class="bg-alt">
+        <!-- BENEFÍCIOS (ZEBRA-STRIPING: Fundo Branco) -->
+        <section>
             <div class="container benefits-grid fade-in-section">
                 <div class="benefits-text">
                     <h2 class="section-title">O que você ganha ao iniciar o tratamento?</h2>
@@ -757,19 +912,20 @@
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Redução drástica dos episódios de compulsão alimentar.
+                            Redução drástica dos episódios de compulsão alimentar e culpa.
+                        </li>
+                        <!-- TEXTO REFINADO BASEADO NA APOSTILA: Tolerância ao Mal-estar e Escala da Fome e Saciedade -->
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                            Desenvolvimento de Habilidades Práticas (TIP) para aumentar a tolerância ao mal-estar e frear impulsos.
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Desenvolvimento de Habilidades Práticas (TIP) para tolerar o mal-estar e frear impulsos.
+                            Domínio prático da Escala da Fome e Saciedade para nutrir o seu corpo com mais consciência corporal.
                         </li>
                         <li>
                             <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Mais consciência corporal (Comer Intuitivo) e inteligência emocional.
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-                            Resultados estéticos sustentáveis, sem efeito sanfona.
+                            Aumento da flexibilidade psicológica, conquistando resultados estéticos sustentáveis, sem efeito sanfona.
                         </li>
                     </ul>
                     <br>
@@ -784,8 +940,8 @@
             </div>
         </section>
 
-        <!-- SEÇÃO DE VÍDEO -->
-        <section>
+        <!-- SEÇÃO DE VÍDEO (ZEBRA-STRIPING: Fundo Verde Claro) -->
+        <section class="bg-alt">
             <div class="container fade-in-section">
                 <div class="text-center">
                     <h2 class="section-title">Entenda na Prática</h2>
@@ -799,8 +955,8 @@
             </div>
         </section>
 
-        <!-- PROVA SOCIAL (DEPOIMENTOS TIPO GOOGLE) -->
-        <section class="bg-alt">
+        <!-- PROVA SOCIAL (ZEBRA-STRIPING: Fundo Branco) -->
+        <section>
             <div class="container fade-in-section">
                 <div class="text-center">
                     <h2 class="section-title">Quem já viveu essa transformação</h2>
@@ -851,8 +1007,8 @@
             </div>
         </section>
 
-        <!-- SEÇÃO FAQ (DÚVIDAS FREQUENTES) -->
-        <section id="faq">
+        <!-- SEÇÃO FAQ (ZEBRA-STRIPING: Fundo Verde Claro) -->
+        <section id="faq" class="bg-alt">
             <div class="container fade-in-section">
                 <div class="text-center">
                     <h2 class="section-title">Dúvidas Frequentes</h2>
@@ -928,16 +1084,8 @@
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <svg viewBox="0 0 24 24">
-                            <defs>
-                                <linearGradient id="leafGradientFooter" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#4CAF50" />
-                                    <stop offset="100%" stop-color="#1B5E20" />
-                                </linearGradient>
-                            </defs>
-                            <path fill="url(#leafGradientFooter)" d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.05,10.5 7.05,10.5C7.05,10.5 12,8 17,8Z" />
-                        </svg>
-                        Nutrição Contextual
+                        <!-- O Logo original tem texto escuro. O filter abaixo transforma ele em branco puro para o rodapé E dar o ZOOM correto -->
+                        <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo" class="footer-logo-img" loading="lazy">
                     </div>
                     <p class="footer-about">Referência em Nutrição Comportamental e Emagrecimento Sustentável há 17 anos.</p>
                 </div>
@@ -953,7 +1101,7 @@
                     <p>Praia de Belas, Porto Alegre - RS</p>
                     <p>CEP: 90810-240</p>
                     <div style="margin-top: 15px; font-size: 0.85rem; color: rgba(255,255,255,0.6); line-height: 1.6;">
-                        <p>CNPJ: 51.288.533/0001-51</p>
+                        <p>CNPJ: 38.158.741/0001-78</p>
                         <p>Responsável Técnica: CRN 6746</p>
                     </div>
                 </div>
@@ -1013,7 +1161,7 @@
                 });
             });
 
-            console.log("Nutrição Contextual: Landing Page Otimizada com FAQ e Logo Atualizados! 🚀");
+            console.log("Nutrição Contextual: Landing Page Otimizada com Especialista e Zebra Striping! 🚀");
         });
     </script>
 </body>
