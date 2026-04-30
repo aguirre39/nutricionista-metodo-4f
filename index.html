@@ -407,19 +407,108 @@
             color: var(--color-primary);
         }
 
-        /* MÉTODO 4F & ABOUT */
+        /* =========================================================
+           O QUE É A NUTRIÇÃO CONTEXTUAL (CARD EM DESTAQUE)
+           ========================================================= */
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 2fr;
+            grid-template-columns: 1fr 2.5fr;
             gap: 40px;
             align-items: center;
-            background: var(--color-bg);
-            padding: 40px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow-sm);
-            border-left: 5px solid var(--color-brand-coral);
+            background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+            padding: 50px;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(22, 67, 68, 0.2);
+            border-left: 8px solid var(--color-brand-coral);
+            color: white;
+            position: relative;
+            overflow: hidden;
         }
-        .about-text h3 { color: var(--color-primary); margin-bottom: 15px; font-size: 1.5rem; }
+        /* Efeito super premium de Marca D'água no fundo do Card */
+        .about-content::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 250px;
+            height: 250px;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24" fill="%23ffffff" opacity="0.04" xmlns="http://www.w3.org/2000/svg"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 7.05,10.5 7.05,10.5C7.05,10.5 12,8 17,8Z"/></svg>');
+            background-repeat: no-repeat;
+            background-size: contain;
+            pointer-events: none;
+        }
+        .about-text {
+            position: relative; /* Garante que fique acima da marca d'água */
+            z-index: 2;
+        }
+        .about-text h3 { 
+            color: white; 
+            margin-bottom: 20px; 
+            font-size: 2rem; 
+            font-weight: 800;
+        }
+        .about-text p { 
+            font-size: 1.15rem; 
+            color: rgba(255,255,255,0.9); 
+            line-height: 1.8; 
+        }
+        .about-text strong { 
+            color: var(--color-brand-coral-light); /* Destaque sutil para os termos científicos */
+            font-weight: 700; 
+        }
+        .about-icon {
+            position: relative;
+            z-index: 2;
+        }
+        .about-icon svg {
+            fill: var(--color-brand-coral);
+            width: 100px;
+            height: 100px;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.25)); /* Sombra para dar aspecto 3D no ícone */
+        }
+        
+        /* Novas classes para a lista de features da Nutrição Contextual */
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .about-feature-icon {
+            flex-shrink: 0;
+            width: 55px;
+            height: 55px;
+            background-color: rgba(217, 123, 101, 0.15); /* Coral com transparência */
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-brand-coral-light);
+            transition: var(--transition);
+            border: 1px solid rgba(217, 123, 101, 0.3);
+        }
+        .about-feature:hover .about-feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            background-color: var(--color-brand-coral);
+            color: white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .about-feature-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: none;
+        }
+        .about-feature-text p {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.9);
+            line-height: 1.7;
+            margin: 0;
+        }
 
         /* CARDS 4 PILARES */
         .pillars-grid {
@@ -716,13 +805,13 @@
                 white-space: nowrap; 
             }
 
-            .hero-grid, .about-content, .benefits-grid { grid-template-columns: 1fr; }
+            .hero-grid, .benefits-grid { grid-template-columns: 1fr; }
             .hero { padding: 40px 0 60px 0; text-align: center; }
             .hero-text h1 { font-size: 2.2rem; }
             .hero-image-wrapper { justify-content: center; margin-top: 30px; padding: 0 15px; }
             .experience-badge { left: -5px; bottom: -15px; padding: 15px; }
             
-            /* Ajuste Especialista Mobile (Integrado na Hero) */
+            /* Ajuste Especialista Mobile */
             .especialista-footer-grid { 
                 grid-template-columns: 1fr; 
                 gap: 40px; 
@@ -732,7 +821,22 @@
             }
             .especialista-text h2 { font-size: 2.4rem; }
             
-            .about-content { text-align: center; border-left: none; border-top: 5px solid var(--color-brand-coral); }
+            /* Ajuste Destaque About Mobile */
+            .about-content { 
+                grid-template-columns: 1fr; 
+                text-align: center; 
+                border-left: none; 
+                border-top: 8px solid var(--color-brand-coral); 
+                padding: 40px 25px; 
+            }
+            .about-icon svg { width: 70px; height: 70px; }
+            .about-feature {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 15px;
+            }
+
             .section-title { font-size: 1.8rem; }
             .cta-final h2 { font-size: 2.2rem; }
             .cta-final { padding: 70px 0; }
@@ -825,7 +929,7 @@
             </div>
         </section>
 
-        <!-- SEÇÃO SOBRE A NUTRIÇÃO CONTEXTUAL (ZEBRA-STRIPING: Fundo Branco) -->
+        <!-- SEÇÃO SOBRE A NUTRIÇÃO CONTEXTUAL (AGORA EM DESTAQUE TOTAL) -->
         <section id="sobre">
             <div class="container fade-in-section">
                 <div class="text-center">
@@ -835,16 +939,40 @@
                 
                 <div class="about-content">
                     <div class="about-icon text-center">
-                        <svg viewBox="0 0 24 24" width="80" height="80" fill="var(--color-primary-light)">
+                        <!-- O ícone agora está em coral, brilhando sobre o fundo escuro. Aria-hidden para acessibilidade -->
+                        <svg viewBox="0 0 24 24" width="80" height="80" aria-hidden="true">
                             <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M15.5,10.5L14,9L12,11L10,9L8.5,10.5L10.5,12.5L8.5,14.5L10,16L12,14L14,16L15.5,14.5L13.5,12.5L15.5,10.5Z" />
                         </svg>
                     </div>
                     <div class="about-text">
                         <h3>O que é a Nutrição Contextual?</h3>
-                        <!-- TEXTO REFINADO BASEADO NA APOSTILA: Entrevista Motivacional incluída -->
-                        <p>Fundamentado nas <strong>Terapias Comportamentais Contextuais (ACT e DBT)</strong>, na <strong>Entrevista Motivacional</strong> e nas práticas de <strong>Mindful e Intuitive Eating</strong>, o método tem como objetivo desenvolver a flexibilidade psicológica para a mudança do comportamento alimentar.</p>
-                        <br>
-                        <p>Diferente das dietas que focam apenas na restrição, nós entendemos que o problema não é a comida, mas a forma como você se relaciona com ela. Tratamos a raiz da compulsão devolvendo a sua autonomia alimentar através do <strong>Método 4F</strong>.</p>
+                        
+                        <div class="about-feature">
+                            <div class="about-feature-icon" aria-hidden="true">
+                                <!-- Ícone de Cérebro/Mente representando Psicologia e Comportamento -->
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+                                    <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+                                </svg>
+                            </div>
+                            <div class="about-feature-text">
+                                <p>Fundamentado nas <strong>Terapias Comportamentais Contextuais (ACT e DBT)</strong>, na <strong>Entrevista Motivacional</strong> e nas práticas de <strong>Mindful e Intuitive Eating</strong>, o método tem como objetivo desenvolver a flexibilidade psicológica para a mudança do comportamento alimentar.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-feature">
+                            <div class="about-feature-icon" aria-hidden="true">
+                                <!-- Ícone de Maçã representando a Nutrição sem terrorismo -->
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/>
+                                    <path d="M10 2c1 .5 2 2 2 5"/>
+                                </svg>
+                            </div>
+                            <div class="about-feature-text">
+                                <p>Diferente das dietas que focam apenas na restrição, nós entendemos que o problema não é a comida, mas a forma como você se relaciona com ela. Tratamos a raiz da compulsão devolvendo a sua autonomia alimentar através do <strong>Método 4F</strong>.</p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
