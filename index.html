@@ -18,6 +18,29 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://seusite.com.br">
 
+    <!-- TAGS DE IDIOMA E REGIONALIZAÇÃO (HREFLANG) -->
+    <link rel="alternate" hreflang="pt-BR" href="https://seusite.com.br">
+    <link rel="alternate" hreflang="x-default" href="https://seusite.com.br">
+
+    <!-- SEGURANÇA E PRIVACIDADE (EQUIVALENTES A CABEÇALHOS HTTP) -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <!-- FERRAMENTAS DE WEBMASTER (SUBSTITUA "SEU_CODIGO_AQUI" PELOS SEUS DE VERIFICAÇÃO) -->
+    <!-- <meta name="google-site-verification" content="SEU_CODIGO_AQUI"> -->
+    <!-- <meta name="msvalidate.01" content="SEU_CODIGO_AQUI"> -->
+
+    <!-- GOOGLE ANALYTICS 4 (SUBSTITUA "G-XXXXXXXXXX" COM SUA ID DO GA4) -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+
     <!-- OPEN GRAPH (REDES SOCIAIS E WHATSAPP) -->
     <meta property="og:title" content="Nutricionista Comportamental em Porto Alegre | Nutrição Contextual | CRN 6746"> <!-- MODIFICADO -->
     <meta property="og:description"
@@ -58,116 +81,114 @@
     <link rel="shortcut icon" href="img/Logo-nutricao.png" type="image/png">
     <link rel="apple-touch-icon" href="img/Logo-nutricao.png">
 
-    <!-- SCHEMA MARKUP (LOCAL BUSINESS / MEDICAL) -->
-    <!-- MODIFICADO: LocalBusiness Schema -->
+    <!-- SCHEMA MARKUP (LOCAL BUSINESS & FAQPAGE COMBINED) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "HealthAndBeautyBusiness",
-      "name": "Nutrição Contextual",
-      "alternateName": "Nutrição Comportamental Porto Alegre",
-      "image": "https://seusite.com.br/img/Logo-nutricao.png",
-      "@id": "https://seusite.com.br",
-      "url": "https://seusite.com.br",
-      "telephone": "+5551993160254",
-      "taxID": "38.158.741/0001-78",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Getúlio Vargas, 1157 - Sala 516 - Menino Deus",
-        "addressLocality": "Porto Alegre",
-        "addressRegion": "RS",
-        "postalCode": "90150-002",
-        "addressCountry": "BR"
-      },
-      "founder": {
-        "@type": "Person",
-        "name": "Letícia Christianetti",
-        "jobTitle": "Nutricionista Comportamental e Terapeuta Integrativa",
-        "identifier": {
-          "@type": "PropertyValue",
-          "name": "CRN",
-          "value": "6746"
-        }
-      },
-      "description": "Serviço de Nutrição Contextual e Comportamental com Letícia Christianetti, CRN 6746. Especialista em compulsão alimentar, emagrecimento sustentável e Método 4F em Porto Alegre, Menino Deus. Atendimento presencial e online para todo o Brasil.",
-      "priceRange": "$$",
-      "openingHours": ["Mo-Tu 09:00-17:00", "We-Th 07:00-20:00", "Fr 07:00-15:00", "Sa 08:00-12:00"],
-      "hasMap": "https://maps.google.com/?q=Av.+Get%C3%BAlio+Vargas,+1157,+Porto+Alegre",
-      "paymentAccepted": "Dinheiro, PIX, Cartão de Crédito, Cartão de Débito, Unimed",
-      "areaServed": ["Porto Alegre", "Viamão", "Canoas", "São Leopoldo", "Região Metropolitana de Porto Alegre"],
-      "sameAs": ["https://www.instagram.com/nutricaocontextual", "https://wa.me/5551993160254"]
-    }
-    </script>
-
-    <!-- MODIFICADO: FAQPage Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Vou receber um cardápio altamente restritivo?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. A base da Nutrição Contextual é combater a \"mentalidade de dieta\" e o terrorismo nutricional. Vamos construir juntos uma rotina alimentar que respeite suas preferências, honre a sua fome e não exclua do nada os alimentos que você gosta. O objetivo é autonomia alimentar, não restrição."
-          }
+          "@type": "HealthAndBeautyBusiness",
+          "name": "Nutrição Contextual",
+          "alternateName": "Nutrição Comportamental Porto Alegre",
+          "image": "https://seusite.com.br/img/Logo-nutricao.png",
+          "@id": "https://seusite.com.br",
+          "url": "https://seusite.com.br",
+          "telephone": "+5551993160254",
+          "taxID": "38.158.741/0001-78",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Getúlio Vargas, 1157 - Sala 516 - Menino Deus",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "postalCode": "90150-002",
+            "addressCountry": "BR"
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "Letícia Christianetti",
+            "jobTitle": "Nutricionista Comportamental e Terapeuta Integrativa",
+            "identifier": {
+              "@type": "PropertyValue",
+              "name": "CRN",
+              "value": "6746"
+            }
+          },
+          "description": "Serviço de Nutrição Contextual e Comportamental com Letícia Christianetti, CRN 6746. Especialista em compulsão alimentar, emagrecimento sustentável e Método 4F em Porto Alegre, Menino Deus. Atendimento presencial e online para todo o Brasil.",
+          "priceRange": "$$",
+          "openingHours": ["Mo-Tu 09:00-17:00", "We-Th 07:00-20:00", "Fr 07:00-15:00", "Sa 08:00-12:00"],
+          "hasMap": "https://maps.google.com/maps?daddr=-30.0546807,-51.2226513+(RAM+Sa%C3%BAde+Integral,+Av.+Get%C3%BAlio+Vargas,+1157+-+Sala+516+-+Menino+Deus,+Porto+Alegre+-+RS,+90150-002)",
+          "paymentAccepted": "Dinheiro, PIX, Cartão de Crédito, Cartão de Débito, Unimed",
+          "areaServed": ["Porto Alegre", "Viamão", "Canoas", "São Leopoldo", "Região Metropolitana de Porto Alegre"],
+          "sameAs": ["https://www.instagram.com/nutricaocontextual", "https://wa.me/5551993160254"]
         },
         {
-          "@type": "Question",
-          "name": "Como o método ajuda nos episódios de compulsão alimentar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Diferente de apenas focar na \"força de vontade\", o Método 4F atua na raiz do problema. Utilizamos a avaliação da Função da comida (para que você está comendo?) e treinamos Habilidades TIP e de Mindful Eating (comer consciente). Isso ajuda você a notar a emoção antes do impulso, reduzindo e controlando os episódios de compulsão sem sofrimento."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Vou precisar cortar carboidratos e doces para emagrecer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Definitivamente não. Trabalhamos contra a dicotomia alimentar (a ideia de que existem alimentos \"bons\" e \"ruins\"). Você vai aprender sobre a Frequência e a Fartura, entendendo como equilibrar o índice glicêmico das suas refeições para ter mais saciedade e energia, sem precisar banir os carboidratos ou os doces da sua vida."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O acompanhamento é feito online ou apenas presencial?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Realizamos atendimentos nos dois formatos. Se você for de Porto Alegre (RS) ou região, podemos fazer os encontros presenciais. Se você morar em outra cidade ou preferir o conforto de casa, o atendimento online tem a mesma profundidade, acolhimento e resultados práticos."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "A Nutrição Contextual atende pelo plano Unimed em Porto Alegre?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oferecemos atendimento particular com valores acessíveis, aceitando PIX, cartão de crédito e débito. Para verificar cobertura Unimed ou outros convênios, entre em contato pelo WhatsApp — nossa equipe orienta sobre as opções disponíveis para o seu plano."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Qual a diferença entre Nutrição Contextual e Nutrição Comportamental?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A Nutrição Comportamental é a base científica — uma abordagem que integra psicologia e nutrição para mudar a relação com a comida. A Nutrição Contextual é o método da Letícia Christianetti: ela aplica essas técnicas (ACT, DBT, Mindful Eating) adaptadas ao contexto real de vida de cada paciente. É Nutrição Comportamental com identidade própria e resultado mais profundo."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O atendimento online de nutrição comportamental tem o mesmo resultado que o presencial?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. O acompanhamento online tem a mesma profundidade, ferramentas e resultados que o presencial. Atendemos pacientes de Porto Alegre, Viamão, Canoas, São Leopoldo e de qualquer cidade do Brasil. A consulta é realizada por videochamada com total privacidade, acolhimento e eficácia comprovada pelo Método 4F."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "É possível tratar compulsão alimentar sem usar remédios para emagrecer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim, e com resultados muito mais duradouros. O Método 4F atua diretamente na raiz emocional e comportamental da compulsão, sem dependência de medicamentos. Através das Habilidades TIP, do Mindful Eating e da ACT (Terapia de Aceitação e Compromisso), você aprende a identificar os gatilhos emocionais antes do impulso — reduzindo os episódios de compulsão de forma sustentável, sem efeitos colaterais e sem efeito sanfona."
-          }
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Vou receber um cardápio altamente restritivo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. A base da Nutrição Contextual é combater a \"mentalidade de dieta\" e o terrorismo nutricional. Vamos construir juntos uma rotina alimentar que respeite suas preferências, honre a sua fome e não exclua do nada os alimentos que você gosta. O objetivo é autonomia alimentar, não restrição."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como o método ajuda nos episódios de compulsão alimentar?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Diferente de apenas focar na \"força de vontade\", o Método 4F atua na raiz do problema. Utilizamos a avaliação da Função da comida (para que você está comendo?) e treinamos Habilidades TIP e de Mindful Eating (comer consciente). Isso ajuda você a notar a emoção antes do impulso, reduzindo e controlando os episódios de compulsão sem sofrimento."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vou precisar cortar carboidratos e doces para emagrecer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Definitivamente não. Trabalhamos contra a dicotomia alimentar (a ideia de que existem alimentos \"bons\" e \"ruins\"). Você vai aprender sobre a Frequência e a Fartura, entendendo como equilibrar o índice glicêmico das suas refeições para ter mais saciedade e energia, sem precisar banir os carboidratos ou os doces da sua vida."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O acompanhamento é feito online ou apenas presencial?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Realizamos atendimentos nos dois formatos. Se você for de Porto Alegre (RS) ou região, podemos fazer os encontros presenciais. Se você morar em outra cidade ou preferir o conforto de casa, o atendimento online tem a mesma profundidade, acolhimento e resultados práticos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "A Nutrição Contextual atende pelo plano Unimed em Porto Alegre?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oferecemos atendimento particular com valores acessíveis, aceitando PIX, cartão de crédito e débito. Para verificar cobertura Unimed ou outros convênios, entre em contato pelo WhatsApp — nossa equipe orienta sobre as opções disponíveis para o seu plano."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual a diferença entre Nutrição Contextual e Nutrição Comportamental?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Nutrição Comportamental é a base científica — uma abordagem que integra psicologia e nutrição para mudar a relação com a comida. A Nutrição Contextual é o método da Letícia Christianetti: ela aplica essas técnicas (ACT, DBT, Mindful Eating) adaptadas ao contexto real de vida de cada paciente. É Nutrição Comportamental com identidade própria e resultado mais profundo."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O atendimento online de nutrição comportamental tem o mesmo resultado que o presencial?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. O acompanhamento online tem a mesma profundidade, ferramentas e resultados que o presencial. Atendemos pacientes de Porto Alegre, Viamão, Canoas, São Leopoldo e de qualquer cidade do Brasil. A consulta é realizada por videochamada com total privacidade, acolhimento e eficácia comprovada pelo Método 4F."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "É possível tratar compulsão alimentar sem usar remédios para emagrecer?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim, e com resultados muito mais duradouros. O Método 4F atua diretamente na raiz emocional e comportamental da compulsão, sem dependência de medicamentos. Através das Habilidades TIP, do Mindful Eating e da ACT (Terapia de Aceitação e Compromisso), você aprende a identificar os gatilhos emocionais antes do impulso — reduzindo os episódios de compulsão de forma sustentável, sem efeitos colaterais e sem efeito sanfona."
+              }
+            }
+          ]
         }
       ]
     }

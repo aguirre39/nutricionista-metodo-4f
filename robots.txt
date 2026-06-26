@@ -1,0 +1,58 @@
+# ====================================================================
+# ROBOTS.TXT - OTIMIZADO PARA BUSCADORES E INTELIGÊNCIA ARTIFICIAL (AI/GEO)
+# ====================================================================
+
+# Regra Geral: Permitir indexação para todos os buscadores convencionais
+User-agent: *
+Allow: /
+
+# --------------------------------------------------------------------
+# PERMITIR CRAWLERS DE INTELIGÊNCIA ARTIFICIAL (GEO / AIO / CHATBOTS)
+# --------------------------------------------------------------------
+
+# OpenAI (ChatGPT - GPTBot, OAI-SearchBot e ChatGPT-User)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Gemini (Google-Extended)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI (PerplexityBot e Perplexity-User)
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic Claude (ClaudeBot, Claude-SearchBot e Claude-User)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Apple (Applebot e Applebot-Extended)
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot (Bingbot)
+User-agent: Bingbot
+Allow: /
+
+# --------------------------------------------------------------------
+# SITEMAP OFICIAL
+# --------------------------------------------------------------------
+Sitemap: https://seusite.com.br/sitemap.xml
