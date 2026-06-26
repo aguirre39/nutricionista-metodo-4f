@@ -55,15 +55,15 @@
     <meta name="twitter:card" content="summary_large_image"> <!-- NOVO -->
     <meta name="twitter:title" content="Nutricionista Comportamental em Porto Alegre | Nutrição Contextual | CRN 6746"> <!-- NOVO -->
     <meta name="twitter:description" content="Letícia Christianetti (CRN 6746) - Nutrição Contextual em Porto Alegre. Método 4F para emagrecimento sustentável e compulsão alimentar. Atendimento presencial e online."> <!-- NOVO -->
-    <meta name="twitter:image" content="https://seusite.com.br/img/Nutricionista-Porto-Alegre.png"> <!-- NOVO -->
+    <meta name="twitter:image" content="https://seusite.com.br/img/Nutricionista-Porto-Alegre.webp"> <!-- NOVO -->
 
     <!-- PRÉ-CONEXÕES (PAGESPEED - PERFORMANCE MÁXIMA) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://img.youtube.com">
 
     <!-- LCP FIX: Pré-carrega a imagem principal para o topo da página abrir instantaneamente -->
-    <link rel="preload" as="image" href="img/Nutricionista-Porto-Alegre.png">
+    <link rel="preload" as="image" href="img/Nutricionista-Porto-Alegre.webp">
 
     <!-- RENDER-BLOCKING FIX: Carregamento assíncrono avançado da fonte do Google -->
     <link rel="preload" as="style"
@@ -867,6 +867,69 @@
             border: none;
         }
 
+        /* ESTILO DO PLAY BUTTON E PLACEHOLDER DO VÍDEO COMPORTADO/OTIMIZADO */
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+        }
+
+        .video-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: opacity 0.3s ease, transform 0.5s ease;
+        }
+
+        .video-placeholder:hover img {
+            opacity: 0.95;
+            transform: scale(1.015);
+        }
+
+        .play-button-wrapper {
+            position: absolute;
+            z-index: 2;
+            background: rgba(217, 123, 101, 0.95); /* var(--color-brand-coral) com leve transparência */
+            color: #ffffff;
+            border-radius: 50%;
+            width: 76px;
+            height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(217, 123, 101, 0.4);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .play-button-wrapper svg {
+            width: 32px;
+            height: 32px;
+            fill: #ffffff;
+            transform: translateX(3px); /* Ajusta visualmente o triângulo de play */
+            transition: transform 0.3s ease;
+        }
+
+        .video-placeholder:hover .play-button-wrapper {
+            background: var(--color-primary);
+            box-shadow: 0 8px 32px rgba(38, 103, 104, 0.5);
+            transform: scale(1.08);
+        }
+
+        .video-placeholder:hover .play-button-wrapper svg {
+            transform: translateX(3px) scale(1.08);
+        }
+
         /* =========================================================
            FAQ FIX - NATIVO HTML5 (SEM REFLOW FORÇADO DE JAVASCRIPT)
            ========================================================= */
@@ -1189,7 +1252,7 @@
         <div class="container header-content">
             <a href="/" class="logo" aria-label="Ir para a página inicial da Nutrição Contextual">
                 <!-- CLS Fix: Width e Height e decoding="async" -->
-                <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo" class="logo-img" width="160" height="90"
+                <img src="img/Logo-nutricao.webp" alt="Nutrição Contextual Logo" class="logo-img" width="160" height="90"
                     fetchpriority="high" decoding="async">
             </a>
 
@@ -1254,7 +1317,7 @@
                 <div class="hero-image-wrapper fade-in-section">
                     <div class="hero-image">
                         <!-- CLS Fix: Width e Height corretos -->
-                        <img src="img/Nutricionista-Porto-Alegre.png" alt="Letícia Christianetti em Porto Alegre - RS"
+                        <img src="img/Nutricionista-Porto-Alegre.webp" alt="Letícia Christianetti em Porto Alegre - RS"
                             width="800" height="533" fetchpriority="high" decoding="async">
                         <div class="experience-badge">
                             <span>17+</span>
@@ -1595,11 +1658,18 @@
                         diariamente.</p>
                 </div>
 
-                <div class="video-wrapper">
-                    <!-- Iframe do YouTube com Lazy Load -->
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo Explicativo Método 4F"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen loading="lazy" width="560" height="315"></iframe>
+                <div class="video-wrapper" id="videoWrapper" data-video-id="dQw4w9WgXcQ">
+                    <!-- Vídeo otimizado que carrega o iframe sob demanda (sem cookies e scripts até o clique) -->
+                    <div class="video-placeholder">
+                        <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+                            alt="Capa do Vídeo Explicativo Método 4F"
+                            width="900" height="506" loading="lazy" decoding="async">
+                        <div class="play-button-wrapper" aria-label="Assistir ao vídeo explicativo">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1904,7 +1974,7 @@
             <div class="footer-grid">
                 <div>
                     <div class="footer-logo">
-                        <img src="img/Logo-nutricao.png" alt="Nutrição Contextual Logo Branco" class="footer-logo-img"
+                        <img src="img/Logo-nutricao.webp" alt="Nutrição Contextual Logo Branco" class="footer-logo-img"
                             loading="lazy" width="160" height="90" decoding="async">
                     </div>
                     <!-- CORRIGIDO CONTRASTE (Branco Puro) -->
@@ -2007,6 +2077,17 @@
 
             // Nota: O código JS da seção FAQ foi DELETADO com sucesso. 
             // Agora as dúvidas funcionam via <details> nativo do HTML (100% livre de forced reflows e ultra-rápido).
+
+            // 2. LAZY LOAD DO VÍDEO DO YOUTUBE (Evita Cookies de Terceiros e melhora Performance do Lighthouse)
+            const videoWrapper = document.getElementById('videoWrapper');
+            if (videoWrapper) {
+                videoWrapper.addEventListener('click', function () {
+                    const videoId = this.getAttribute('data-video-id');
+                    if (videoId) {
+                        this.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1" title="Vídeo Explicativo Método 4F" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="560" height="315"></iframe>`;
+                    }
+                });
+            }
 
             console.log("Nutrição Contextual: Landing Page 100/100 (PageSpeed + Acessibilidade Máxima) Carregada com Sucesso! 🚀");
         });
