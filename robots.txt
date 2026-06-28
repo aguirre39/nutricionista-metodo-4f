@@ -1,58 +1,44 @@
-# ====================================================================
-# ROBOTS.TXT - OTIMIZADO PARA BUSCADORES E INTELIGÊNCIA ARTIFICIAL (AI/GEO)
-# ====================================================================
+# Hybrid GEO/AEO Strategy: Allow citation bots, block training bots
 
-# Regra Geral: Permitir indexação para todos os buscadores convencionais
-User-agent: *
-Allow: /
-
-# --------------------------------------------------------------------
-# PERMITIR CRAWLERS DE INTELIGÊNCIA ARTIFICIAL (GEO / AIO / CHATBOTS)
-# --------------------------------------------------------------------
-
-# OpenAI (ChatGPT - GPTBot, OAI-SearchBot e ChatGPT-User)
-User-agent: GPTBot
-Allow: /
-
+# 1. PERMITIR IA DE BUSCA (Trazem Cliques e Citações)
 User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-# Google Gemini (Google-Extended)
-User-agent: Google-Extended
-Allow: /
-
-# Perplexity AI (PerplexityBot e Perplexity-User)
 User-agent: PerplexityBot
-Allow: /
-
-User-agent: Perplexity-User
-Allow: /
-
-# Anthropic Claude (ClaudeBot, Claude-SearchBot e Claude-User)
-User-agent: ClaudeBot
 Allow: /
 
 User-agent: Claude-SearchBot
 Allow: /
 
-User-agent: Claude-User
+# Google (Permite citação no Gemini/SGE, mas o treinamento é bloqueado abaixo)
+User-agent: Googlebot
 Allow: /
 
-# Apple (Applebot e Applebot-Extended)
-User-agent: Applebot
+# 2. BLOQUEAR APENAS TREINAMENTO MACRO
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Outros bots de scraping em larga escala
+User-agent: anthropic-ai
+Disallow: /
+User-agent: Bytespider
+Disallow: /
+
+# 3. Regra Geral para outros bots
+User-agent: *
 Allow: /
 
-User-agent: Applebot-Extended
-Allow: /
-
-# Microsoft Copilot (Bingbot)
-User-agent: Bingbot
-Allow: /
-
-# --------------------------------------------------------------------
-# SITEMAP OFICIAL
-# --------------------------------------------------------------------
+# 4. SITEMAP
 Sitemap: https://seusite.com.br/sitemap.xml
