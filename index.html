@@ -47,10 +47,10 @@
     <!-- LCP FIX: Pré-carregamento da imagem principal -->
     <link rel="preload" as="image" href="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp">
 
-    <!-- RENDER-BLOCKING FIX: Carregamento assíncrono da fonte -->
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+    <!-- RENDER-BLOCKING FIX: Carregamento assíncrono da fonte DM Sans e Montserrat (Nova Identidade Visual) -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap"></noscript>
 
     <!-- SCHEMA MARKUP (MedicalBusiness + Person + FAQPage) -->
     <script type="application/ld+json">
@@ -331,28 +331,38 @@
 
     <style>
         /* ==================================================================
-           CSS PURO OTIMIZADO E ACESSÍVEL (WCAG AAA)
+           CSS PURO OTIMIZADO E ACESSÍVEL (WCAG AAA) - IDENTIDADE VISUAL ATUALIZADA
            ================================================================== */
         :root {
-            --color-primary: #266768;
-            --color-primary-dark: #164344;
-            --color-primary-light: #3A8889;
-            --color-footer: #0D2B2C;
-            --color-brand-coral: #D97B65;
-            --color-brand-coral-light: #FDF1EE;
-            --color-brand-coral-dark: #611C0D; /* Contraste Máximo WCAG AAA */
-            --color-secondary: #F0F7F7;
-            --color-bg: #FFFFFF;
-            --color-bg-alt: #FAFCFC;
-            --color-accent: #25D366;
+            /* Novas Cores Baseadas no PDF da Marca */
+            --color-primary: #6F7C46; /* Verde Oliva */
+            --color-primary-dark: #4F5931; /* Verde Oliva Escuro (Contraste) */
+            --color-primary-light: #8E9E59; /* Verde Oliva Claro */
+            --color-footer: #3B4224; /* Verde Oliva Muito Escuro */
+            
+            --color-brand-coral: #BC6D5A; /* Terracota */
+            --color-brand-coral-light: #F4EBE8; /* Fundo suave Terracota */
+            --color-brand-coral-dark: #7A3F31; /* Terracota escuro para contraste AAA */
+            
+            --color-secondary: #EDE3D4; /* Bege / Areia */
+            
+            --color-bg: #FFFFFF; /* Fundo Principal */
+            --color-bg-alt: #FBF6F2; /* Off-White / Creme */
+            
+            --color-accent: #25D366; /* Mantido para Botões do WhatsApp (Convenção e Conversão) */
             --color-accent-hover: #128C7E;
-            --color-text: #222222; 
-            --color-text-light: #4A5C5C;
-            --font-main: 'Inter', sans-serif;
+            
+            --color-text: #2A2A2A; 
+            --color-text-light: #5C4D48; /* Marrom escuro para manter leitura AAA ao invés do cinza padrão */
+            
+            /* Novas Tipografias Baseadas no PDF */
+            --font-main: 'DM Sans', sans-serif;
+            --font-heading: 'Montserrat', sans-serif;
+            
             --transition: all 0.3s ease;
             --border-radius: 12px;
-            --shadow-sm: 0 4px 6px rgba(38, 103, 104, 0.05);
-            --shadow-md: 0 10px 20px rgba(38, 103, 104, 0.08);
+            --shadow-sm: 0 4px 6px rgba(111, 124, 70, 0.05); /* Sombra baseada no Verde Oliva */
+            --shadow-md: 0 10px 20px rgba(111, 124, 70, 0.08);
         }
 
         /* RESET OTIMIZADO */
@@ -363,6 +373,11 @@
         a { text-decoration: none; color: inherit; }
         ul, ol { list-style: none; }
         mark { background-color: var(--color-brand-coral-light); color: var(--color-brand-coral-dark); padding: 0 4px; border-radius: 4px; font-weight: 600;}
+
+        /* APLICAÇÃO DA FONTE DE CABEÇALHOS (MONTSERRAT) */
+        h1, h2, h3, h4, h5, h6, .section-title, .faq-question, .btn, .crn-badge, .experience-badge {
+            font-family: var(--font-heading);
+        }
 
         /* ACESSIBILIDADE DE TECLADO (FOCUS STATE VISÍVEL) */
         *:focus-visible { outline: 3px solid var(--color-brand-coral); outline-offset: 4px; border-radius: 4px; }
@@ -404,13 +419,26 @@
         /* CABEÇALHO SEMÂNTICO */
         .site-header { background-color: var(--color-bg); padding: 15px 0; box-shadow: var(--shadow-sm); position: sticky; top: 0; z-index: 100; }
         .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .header-contact { display: flex; align-items: center; gap: 20px; }
+        .header-phone {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+        .header-phone:hover {
+            color: var(--color-brand-coral);
+            text-decoration: underline;
+        }
         .logo { display: flex; align-items: center; }
         .logo-img { height: 75px; width: auto; object-fit: contain; transition: var(--transition); transform: scale(1.2); transform-origin: left center; }
 
         /* MAIN HERO SECTION */
         .hero { padding: 80px 0; background: linear-gradient(to right bottom, var(--color-secondary), var(--color-bg)); position: relative; overflow: hidden; }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .crn-badge { display: inline-flex; align-items: center; gap: 6px; background-color: var(--color-brand-coral-light); color: var(--color-brand-coral-dark); padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 800; margin-bottom: 20px; border: 1px solid rgba(217, 123, 101, 0.4); }
+        .crn-badge { display: inline-flex; align-items: center; gap: 6px; background-color: var(--color-brand-coral-light); color: var(--color-brand-coral-dark); padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 800; margin-bottom: 20px; border: 1px solid rgba(188, 109, 90, 0.3); }
         .crn-badge svg { width: 16px; height: 16px; fill: var(--color-brand-coral-dark); }
         .hero-text h1 { font-size: 2.8rem; font-weight: 900; color: var(--color-primary-dark); line-height: 1.1; margin-bottom: 20px; }
         .hero-text p { font-size: 1.2rem; color: var(--color-text-light); margin-bottom: 30px; }
@@ -418,7 +446,7 @@
         .hero-image-wrapper { display: flex; justify-content: flex-end; align-items: center; }
         .hero-image { position: relative; max-width: 500px; width: 100%; }
         .hero-image img { border-radius: 16px; box-shadow: var(--shadow-md); width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/5; }
-        .experience-badge { position: absolute; bottom: -20px; left: -20px; background-color: var(--color-brand-coral-dark); color: white; padding: 20px 25px; border-radius: 12px; box-shadow: 0 10px 20px rgba(97, 28, 13, 0.25); display: flex; flex-direction: column; align-items: center; z-index: 2; }
+        .experience-badge { position: absolute; bottom: -20px; left: -20px; background-color: var(--color-brand-coral-dark); color: white; padding: 20px 25px; border-radius: 12px; box-shadow: 0 10px 20px rgba(122, 63, 49, 0.25); display: flex; flex-direction: column; align-items: center; z-index: 2; }
         .experience-badge span:first-child { font-size: 2.2rem; font-weight: 900; line-height: 1; margin-bottom: 5px; }
         .experience-badge span:last-child { font-size: 0.85rem; font-weight: 600; text-transform: uppercase; text-align: center; }
 
@@ -427,7 +455,7 @@
         .bg-alt { background-color: var(--color-bg-alt); }
 
         /* METODOLOGIA 4F (Cards Semânticos) */
-        .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 40px; }
+        .pillars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-bottom: 20px;}
         .pillar-card { background: var(--color-bg); padding: 35px 25px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); transition: var(--transition); border: 1px solid #eee; display: flex; flex-direction: column; }
         .pillar-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--color-brand-coral); }
         .pillar-icon { width: 60px; height: 60px; background-color: var(--color-secondary); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: var(--color-primary); }
@@ -483,9 +511,9 @@
         .site-footer { background-color: var(--color-footer); color: white; padding: 80px 0 25px 0; }
         .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; margin-bottom: 50px; }
         .footer-logo-img { height: 80px; width: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.9; margin-bottom: 15px; transform: scale(1.1); transform-origin: left center;}
-        .footer-info h3 { margin-bottom: 25px; font-size: 1.2rem; color: var(--color-brand-coral-light); font-weight: 700; }
+        .footer-info h3 { margin-bottom: 25px; font-size: 1.2rem; color: var(--color-secondary); font-weight: 700; }
         .footer-info p, .footer-info a { color: #E0E0E0; margin-bottom: 12px; display: block; font-size: 0.95rem; transition: color 0.2s ease;}
-        .footer-info a:hover { color: var(--color-brand-coral-light); text-decoration: underline; text-underline-offset: 4px; }
+        .footer-info a:hover { color: var(--color-brand-coral); text-decoration: underline; text-underline-offset: 4px; }
         .footer-bottom { text-align: center; padding-top: 25px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #B0B0B0; font-size: 0.85rem; }
 
         /* WHATSAPP FLUTUANTE */
@@ -501,9 +529,28 @@
             .hero-text h1 { font-size: 2.3rem; }
             .hero-image-wrapper { justify-content: center; margin-top: 30px; padding: 0 15px; }
             .experience-badge { left: -5px; bottom: -15px; padding: 15px; }
-            .header-content { flex-direction: row; }
+            /* Adjust header for mobile */
+            .site-header { padding: 10px 0; } /* Smaller header padding */
+            .header-content { flex-direction: row; align-items: center; } /* Ensure alignment */
             .logo { font-size: 1.2rem; }
-            .header-btn { display: none; } 
+            .logo-img { height: 50px; } /* Smaller logo */
+            .header-contact {
+                display: flex; /* Make it visible */
+                flex-direction: column; /* Stack phone and button vertically */
+                align-items: flex-end; /* Align to the right */
+                gap: 5px; /* Small gap between stacked items */
+                text-align: right; /* Text alignment */
+            }
+            .header-phone {
+                display: block; /* Make the phone number visible */
+                font-size: 0.85rem; /* Smaller font for mobile */
+                padding: 2px 0; /* Some padding */
+            }
+            .header-btn {
+                display: flex; /* Make the button visible */
+                padding: 6px 12px; /* Smaller padding for mobile button */
+                font-size: 0.75rem; /* Smaller font for mobile button */
+            } 
             .section-title { font-size: 1.9rem; text-align: center;}
             .section-subtitle { text-align: center; }
             .comparison-table th, .comparison-table td { padding: 12px 10px; font-size: 0.95rem;}
@@ -518,9 +565,14 @@
             <a href="/" class="logo" aria-label="Página inicial Nutrição Contextual">
                 <img src="img/logo-nutricionista-comportamental-porto-alegre.webp" alt="Nutrição Contextual Logo" class="logo-img" width="160" height="90" fetchpriority="high" decoding="async">
             </a>
-            <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." class="btn btn-pulse header-btn" target="_blank" rel="noopener">
-                Agendar Avaliação
-            </a>
+            <div class="header-contact">
+                <a href="tel:+5551993160254" class="header-phone" aria-label="Ligar para Nutricionista">
+                    (51) 99316-0254
+                </a>
+                <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." class="btn btn-pulse header-btn" target="_blank" rel="noopener">
+                    Agendar Avaliação
+                </a>
+            </div>
         </div>
     </header>
 
@@ -711,7 +763,7 @@
                     <!-- Vídeo otimizado com placeholder (Evita bloqueio de renderização do iframe) -->
                     <div class="video-placeholder" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; cursor: pointer; display: flex; align-items: center; justify-content: center; background-color: #000;">
                         <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg" alt="Capa do Vídeo Explicativo Método 4F" width="900" height="506" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.85; transition: opacity 0.3s ease, transform 0.5s ease;">
-                        <button type="button" class="play-button-wrapper" aria-label="Assistir ao vídeo explicativo" style="position: absolute; z-index: 2; background: rgba(217, 123, 101, 0.95); color: #ffffff; border-radius: 50%; width: 76px; height: 76px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(217, 123, 101, 0.4); border: 2px solid rgba(255, 255, 255, 0.2); cursor: pointer; outline: none;">
+                        <button type="button" class="play-button-wrapper" aria-label="Assistir ao vídeo explicativo" style="position: absolute; z-index: 2; background: rgba(188, 109, 90, 0.95); color: #ffffff; border-radius: 50%; width: 76px; height: 76px; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 32px rgba(188, 109, 90, 0.4); border: 2px solid rgba(255, 255, 255, 0.2); cursor: pointer; outline: none;">
                             <svg viewBox="0 0 24 24" style="width: 32px; height: 32px; fill: #ffffff; transform: translateX(3px);">
                                 <path d="M8 5v14l11-7z" />
                             </svg>
@@ -732,7 +784,8 @@
                 <div class="reviews-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
                     <!-- Depoimento 1 -->
                     <div class="review-card" style="background: var(--color-bg); padding: 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-                        <div class="stars" aria-label="5 estrelas" style="color: #FFB400; margin-bottom: 15px; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
+                        <!-- Cor das estrelas atualizada para o mostarda (#C9BA58) da paleta -->
+                        <div class="stars" aria-label="5 estrelas" style="color: #C9BA58; margin-bottom: 15px; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
                         <p class="review-text" style="font-style: italic; color: var(--color-text-light); margin-bottom: 20px; flex-grow: 1;">"A Letícia é uma excelente profissional, comprometida e dedicada. Gosto muito da forma como ela atende e dá espaço para o nosso sentir como cliente. Me sinto acolhida, ouvida. Super recomendo."</p>
                         <div class="reviewer" style="display: flex; align-items: center; gap: 15px;">
                             <div class="reviewer-avatar" style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--color-brand-coral-light); color: var(--color-brand-coral-dark); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0;" aria-hidden="true">LL</div>
@@ -745,7 +798,7 @@
 
                     <!-- Depoimento 2 -->
                     <div class="review-card" style="background: var(--color-bg); padding: 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-                        <div class="stars" aria-label="5 estrelas" style="color: #FFB400; margin-bottom: 15px; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
+                        <div class="stars" aria-label="5 estrelas" style="color: #C9BA58; margin-bottom: 15px; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
                         <p class="review-text" style="font-style: italic; color: var(--color-text-light); margin-bottom: 20px; flex-grow: 1;">"A Leticia é uma excelente profissional! Trabalha na área de nutrição comportamental abrangendo o comportamento em relação a comida, levando em consideração as emoções! Foi o melhor acompanhamento."</p>
                         <div class="reviewer" style="display: flex; align-items: center; gap: 15px;">
                             <div class="reviewer-avatar" style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--color-brand-coral-light); color: var(--color-brand-coral-dark); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0;" aria-hidden="true">CS</div>
@@ -758,7 +811,7 @@
 
                     <!-- Depoimento 3 -->
                     <div class="review-card" style="background: var(--color-bg); padding: 30px; border-radius: var(--border-radius); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
-                        <div class="stars" aria-label="5 estrelas" style="color: #FFB400; margin-bottom: 15px; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
+                        <div class="stars" aria-label="5 estrelas" style="color: #C9BA58; margin-bottom: 15px; letter-spacing: 2px;">⭐⭐⭐⭐⭐</div>
                         <p class="review-text" style="font-style: italic; color: var(--color-text-light); margin-bottom: 20px; flex-grow: 1;">"Profissional extremamente atenciosa e competente. O seu jeito de lidar com as pessoas é muito especial e um diferencial no tratamento. Disponível, amorosa, atenta às necessidades. Parabéns!!"</p>
                         <div class="reviewer" style="display: flex; align-items: center; gap: 15px;">
                             <div class="reviewer-avatar" style="width: 50px; height: 50px; border-radius: 50%; background-color: var(--color-brand-coral-light); color: var(--color-brand-coral-dark); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.2rem; flex-shrink: 0;" aria-hidden="true">ML</div>
@@ -788,7 +841,7 @@
 
                 <div class="location-grid">
                     <div class="location-card">
-                        <h3 style="font-size: 1.6rem; color: var(--color-primary-dark); font-weight: 800;">Consultório em Porto Alegre</h3>
+                        <h3 style="font-size: 1.6rem; color: var(--color-primary-dark); font-weight: 800; font-family: var(--font-heading);">Consultório em Porto Alegre</h3>
                         <p style="color: var(--color-text-light); margin-top: 10px; line-height: 1.7;">
                             Um espaço integrado de saúde planejado para garantir acolhimento, discrição e segurança terapêutica durante o seu tratamento pelo Método 4F.
                         </p>
@@ -817,7 +870,7 @@
                         </a>
                     </div>
                     
-                    <!-- Imagem do Mapa estática para otimizar LCP. Em uma página real, pode ser um iframe iframe com lazy-load -->
+                    <!-- Imagem do Mapa estática para otimizar LCP. Em uma página real, pode ser um iframe com lazy-load -->
                     <div style="border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow-md); height: 100%; min-height: 350px;">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.6669922008436!2d-51.2226513!3d-30.0546807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979a195e9c43f%3A0x226a0e3a9a4df405!2sRAM%20Sa%C3%BAde%20Integral!5e0!3m2!1spt-BR!2sbr!4v1719358000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa do Google mostrando a localização do consultório da Letícia Christianetti em Porto Alegre"></iframe>
                     </div>
@@ -901,7 +954,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>O "comer emocional disfuncional" ocorre quando tentamos aliviar angústias através do circuito de recompensa da comida. No pilar <strong>Função</strong>, conduzimos o paciente na Matrix da Análise Funcional para investigar se as escolhas no momento de estresse o aproximam de quem ele deseja ser, oferecendo Habilidades de Tolerância como rota segura e paralela.</p>
+                            <p>O "comer emocional disfuncional" ocorre quando usamos a comida como fuga de emoções difíceis. No pilar Função, utilizamos a Análise Funcional para identificar se a escolha afasta ou aproxima você dos seus valores, ensinando técnicas para tolerar frustrações sem o comer exagerado.</p>
                         </div>
                     </details>
 
@@ -911,7 +964,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Sim. No protocolo 4F, o emagrecimento sustentável é a <strong>consequência da reabilitação comportamental</strong>. Focando no Comer Intuitivo (Fartura) para atender necessidades reais, seu corpo sai do modo de sobrevivência de privação extrema. Você aprende a honrar a saúde com nutrição funcional ao invés de buscar dietas de gaveta que produzem falhas inevitáveis.</p>
+                            <p>Sim. O emagrecimento sustentável é a consequência do desenvolvimento de habilidades para o 'comer consciente'. Em vez da restrição, ensinamos a equilibrar o Índice Glicêmico e a escutar os sinais internos do estômago, rompendo a mentalidade de dieta que gera o efeito sanfona.</p>
                         </div>
                     </details>
 
@@ -921,7 +974,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>A fome física tem sinais graduais e fisiológicos claros (barulho no estômago, sensação de vazio real). Já a "vontade de comer" costuma ser um pico repentino gerado por um gatilho ambiental ou emocional. Treinamos a prática de <em>Mindful Eating</em> e o mapeamento com uma "Escala da Fome de 1 a 10" para devolver sua autonomia intuitiva.</p>
+                            <p>A fome física sinaliza o uso de reservas do corpo (ronco no estômago). A fome emocional é guiada por pensamentos e gatilhos. Trabalhamos o Mindful Eating e a Escala de Fome (1 a 10) para recuperar a consciência corporal de forma autônoma.</p>
                         </div>
                     </details>
 
@@ -931,7 +984,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Por atuarmos no processo cognitivo, as mudanças comportamentais — como a dramática diminuição da culpa ao se alimentar e o resgate da atenção à saciedade real do corpo — são frequentemente notadas logo nas primeiras semanas de acompanhamento. A modelagem estética acompanha essa nova estabilização rotineira do comer equilibrado.</p>
+                            <p>Ao atuar na função do comportamento, a redução da culpa ao comer e o resgate da atenção plena (sair do piloto automático) ocorrem rapidamente. A estabilização de peso acompanha o processo de flexibilidade psicológica e mudança consistente de hábitos.</p>
                         </div>
                     </details>
 
@@ -941,7 +994,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Totalmente. O núcleo do tratamento baseia-se em trocas reflexivas diretas com a terapeuta, na construção da Análise Funcional e em cadernos de exercícios de Habilidades. O encontro virtual dispõe da mesma profundidade técnica e calor que proporcionamos presencialmente no consultório do bairro Menino Deus.</p>
+                            <p>Totalmente. A base do método está no treino de habilidades comportamentais e na Matrix de Análise Funcional. A videoconsulta entrega a mesma profundidade técnica e acolhimento que o atendimento na nossa clínica no Menino Deus.</p>
                         </div>
                     </details>
 
@@ -951,7 +1004,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>O agendamento é feito de forma imediata e simplificada pelo WhatsApp <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." target="_blank" rel="noopener" style="color: var(--color-brand-coral); text-decoration: underline;">(51) 99316-0254</a>. Minha equipe orientará sobre vagas disponíveis e alinhará suas necessidades tanto para visitas presenciais quanto para o regime de videoconsultas (nacional e internacional).</p>
+                            <p>O agendamento é feito diretamente pelo nosso WhatsApp <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." target="_blank" rel="noopener" style="color: var(--color-brand-coral); text-decoration: underline;">(51) 99316-0254</a>. Minha equipe compartilhará a disponibilidade de agenda tanto para atendimento presencial (Menino Deus, Porto Alegre), quanto para videoconsultas em todo o Brasil.</p>
                         </div>
                     </details>
 
@@ -961,7 +1014,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>A excelência e profundidade exigidas pelo treino em Terapias Contextuais (ACT/DBT) limitam a modalidade das consultas ao formato particular, o qual garante o devido tempo à sua história. Fornecemos as notas fiscais técnicas requeridas para que o paciente consiga gerir seus processos de <strong>reembolso de consulta</strong> junto ao plano de saúde, incluindo a Unimed.</p>
+                            <p>Focamos na excelência clínica da terceira onda da psicologia e nutrição por meio de consultas particulares. No entanto, fornecemos nota fiscal técnica para solicitação de reembolso das sessões junto a planos de saúde como a Unimed.</p>
                         </div>
                     </details>
 
