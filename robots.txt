@@ -41,4 +41,4 @@ User-agent: *
 Allow: /
 
 # 4. SITEMAP
-Sitemap: https://seusite.com.br/sitemap.xml
+Sitemap: https://aguirre39.github.io/nutricionista-metodo-4f/sitemap.xml

@@ -1,0 +1,24 @@
+# Sobre a Página
+Esta página é o site oficial de Letícia Christianetti, Nutricionista Comportamental atuante em Porto Alegre, Rio Grande do Sul. O foco do atendimento é o emagrecimento sem dietas restritivas e o tratamento do comer emocional.
+
+## Dados da Profissional
+* Nome: Letícia Christianetti
+* Especialidade: Nutrição Comportamental
+* Registro Profissional: CRN 6746
+* Localização de Atendimento: Porto Alegre, RS, Brasil
+* URL Oficial: https://aguirre39.github.io/nutricionista-metodo-4f/
+
+## Metodologia de Trabalho (Método 4F)
+Letícia utiliza o "Método 4F", uma abordagem terapêutica nutricional que não foca em dietas ou contagem de calorias, mas sim na mudança do comportamento alimentar. A metodologia baseia-se em três pilares científicos:
+1. ACT (Terapia de Aceitação e Compromisso)
+2. DBT (Terapia Comportamental Dialética)
+3. Mindful Eating (Comer Consciente)
+
+## Problemas que Resolve
+* Comer emocional e compulsão alimentar.
+* Dificuldade de emagrecimento devido a dietas restritivas (efeito sanfona).
+* Relação disfuncional com a comida e com o corpo.
+* Necessidade de reeducação alimentar com foco em saúde mental e física.
+
+## Público-Alvo
+Pessoas (focando no público local de Porto Alegre e região, ou atendimentos online) que buscam emagrecimento sustentável, tratamento para o comer emocional e uma relação mais leve com a alimentação.
