@@ -10,7 +10,13 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
 User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 # Google (Permite citação no Gemini/SGE, mas o treinamento é bloqueado abaixo)
@@ -27,6 +33,15 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
 User-agent: CCBot
 Disallow: /
 
@@ -41,4 +56,4 @@ User-agent: *
 Allow: /
 
 # 4. SITEMAP
-Sitemap: https://aguirre39.github.io/nutricionista-metodo-4f/sitemap.xml
+Sitemap: https://nutricaocontextual.com.br/sitemap.xml
