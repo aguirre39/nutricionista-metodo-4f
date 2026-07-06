@@ -44,8 +44,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://img.youtube.com">
 
-    <!-- LCP FIX: Pré-carregamento da imagem principal -->
-    <link rel="preload" as="image" href="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp">
+    <!-- LCP FIX: Pré-carregamento responsivo da imagem principal (LCP) -->
+    <link rel="preload" as="image" href="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp"
+          imagesrcset="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746-400.webp 400w,
+                       img/nutricionista-porto-alegre-leticia-christianetti-crn-6746-600.webp 600w,
+                       img/nutricionista-porto-alegre-leticia-christianetti-crn-6746-800.webp 800w,
+                       img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp 1024w"
+          imagesizes="(max-width: 600px) 100vw, 500px">
 
     <!-- RENDER-BLOCKING FIX: Carregamento assíncrono da fonte DM Sans e Montserrat (Nova Identidade Visual) -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap">
@@ -623,7 +628,7 @@
     <header class="site-header">
         <div class="container header-content">
             <a href="/" class="logo" aria-label="Página inicial Nutrição Contextual">
-                <img src="img/logo-nutricionista-comportamental-porto-alegre.webp" alt="Logo Nutrição Contextual - Nutricionista em Porto Alegre" class="logo-img" width="160" height="90" fetchpriority="high" decoding="async">
+                <img src="img/logo-nutricionista-comportamental-porto-alegre.webp" alt="Logo Nutrição Contextual - Nutricionista em Porto Alegre" class="logo-img" width="150" height="100" fetchpriority="high" decoding="async">
             </a>
             <div class="header-contact">
                 <a href="tel:+5551993160254" class="header-phone" aria-label="Ligar para Nutricionista">
@@ -660,7 +665,17 @@
                 <div class="hero-image-wrapper fade-in-section">
                     <figure class="hero-image">
                         <!-- Imagem de espaço reservado. Substitua pela URL da foto profissional -->
-                        <img src="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp" alt="Letícia Christianetti, Nutricionista Comportamental no consultório em Porto Alegre" width="800" height="533" fetchpriority="high" decoding="async" style="border-radius: 16px; box-shadow: var(--shadow-md); width: 100%; height: auto; object-fit: cover; object-position: top;">
+                        <img src="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp"
+                             srcset="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746-400.webp 400w,
+                                     img/nutricionista-porto-alegre-leticia-christianetti-crn-6746-600.webp 600w,
+                                     img/nutricionista-porto-alegre-leticia-christianetti-crn-6746-800.webp 800w,
+                                     img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp 1024w"
+                             sizes="(max-width: 600px) 100vw, 500px"
+                             alt="Letícia Christianetti, Nutricionista Comportamental no consultório em Porto Alegre"
+                             width="500" height="625"
+                             fetchpriority="high"
+                             decoding="async"
+                             style="border-radius: 16px; box-shadow: var(--shadow-md); width: 100%; height: auto; object-fit: cover; object-position: top;">
                         <figcaption class="sr-only">Retrato profissional da Nutricionista Letícia Christianetti.</figcaption>
                         <div class="experience-badge" aria-label="17 anos de experiência clínica na área comportamental">
                             <span>17+</span>
