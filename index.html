@@ -58,7 +58,7 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "MedicalBusiness",
+          "@type": ["MedicalBusiness", "Dietitian"],
           "name": "Nutrição Contextual - Letícia Christianetti",
           "image": "https://nutricaocontextual.com.br/img/logo-nutricionista-comportamental-porto-alegre.png",
           "logo": "https://nutricaocontextual.com.br/img/logo-nutricionista-comportamental-porto-alegre.png",
@@ -185,7 +185,36 @@
           "url": "https://nutricaocontextual.com.br/",
           "name": "Nutrição Contextual - Letícia Christianetti",
           "publisher": { "@id": "https://nutricaocontextual.com.br/#business" },
-          "inLanguage": "pt-BR"
+          "inLanguage": "pt-BR",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://nutricaocontextual.com.br/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://nutricaocontextual.com.br/",
+          "url": "https://nutricaocontextual.com.br/",
+          "name": "Nutricionista em Porto Alegre para Emagrecer Sem Dieta | Letícia Christianetti CRN 6746",
+          "description": "Nutricionista em Porto Alegre especializada em emagrecer sem dieta e tratar a compulsão alimentar. Presencial no Menino Deus e online para todo o Brasil. Agende sua avaliação pelo WhatsApp.",
+          "inLanguage": "pt-BR",
+          "isPartOf": { "@id": "https://nutricaocontextual.com.br/#website" },
+          "datePublished": "2024-01-15",
+          "dateModified": "2026-07-06",
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://nutricaocontextual.com.br/img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp"
+          },
+          "about": [
+            { "@type": "MedicalTherapy", "name": "Nutrição Comportamental" },
+            { "@type": "Thing", "name": "Emagrecimento Sustentável" },
+            { "@type": "MedicalCondition", "name": "Compulsão Alimentar", "alternateName": "Binge Eating Disorder" },
+            { "@type": "Thing", "name": "Fome Emocional", "sameAs": "https://www.wikidata.org/wiki/Q5373678" }
+          ]
         },
         {
           "@type": "Person",
@@ -197,6 +226,20 @@
             "name": "CRN",
             "value": "6746"
           },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "url": "https://nutricaocontextual.com.br/",
+          "image": "https://nutricaocontextual.com.br/img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp",
+          "sameAs":[
+            "https://www.instagram.com/nutricaocontextual",
+            "https://www.linkedin.com/in/leticia-christianetti-nutricionista",
+            "https://www.facebook.com/nutricaocontextual",
+            "https://wa.me/5551993160254"
+          ],
           "description": "Nutricionista com 17 anos de experiência, criadora da Matrix da Análise Funcional para o Equilíbrio Alimentar (Método 4F). Especialista em Terapia de Aceitação e Compromisso (ACT), Terapia Comportamental Dialética (DBT) e Mindful Eating.",
           "worksFor":{
             "@id":"https://nutricaocontextual.com.br/#business"
@@ -226,6 +269,7 @@
         },
         {
           "@type": "FAQPage",
+          "@id": "https://nutricaocontextual.com.br/#faq",
           "mainEntity": [
             {
               "@type": "Question",
@@ -256,7 +300,7 @@
               "name": "O método funciona para quem tem Compulsão Alimentar grave?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. O Método 4F foi desenhado para lidar com desequilíbrios impulsivos. Você não será forçada a ter 'força de vontade'. Ensinamos Habilidades TIP (da DBT) — como mudança de temperatura e respiração ritmada — para aumentar a Tolerância ao Mal-Estar emocional sem recorrer à alimentação compulsiva."
+                "text": "Sim. O Método 4F oferece estratégias baseadas em Habilidades TIP (da DBT) — como mudança de temperatura e respiração ritmada — que podem auxiliar no manejo da Tolerância ao Mal-Estar emocional, buscando reduzir a necessidade de recorrer à alimentação compulsiva."
               }
             },
             {
@@ -264,7 +308,7 @@
               "name": "Nutricionista atende pacientes que utilizam Mounjaro, Ozempic ou Venvanse?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim. Embora as medicações atuem na via fisiológica para perda de peso, elas não ensinam a lidar com o comportamento e as emoções. O acompanhamento através do Método 4F é o suporte ideal para desenvolver a flexibilidade psicológica e prevenir o reganho de peso (efeito sanfona) após o desmame medicamentoso."
+                "text": "Sim. Embora as medicações atuem na via fisiológica para perda de peso, elas não ensinam a lidar com o comportamento e as emoções. O acompanhamento através do Método 4F pode ser um suporte valioso para desenvolver a flexibilidade psicológica e auxiliar na manutenção do peso, buscando mitigar o risco de reganho após o desmame medicamentoso."
               }
             },
             {
@@ -312,7 +356,7 @@
               "name": "Quanto tempo leva para perceber resultados?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ao atuar na função do comportamento, a redução da culpa ao comer e o resgate da atenção plena (sair do piloto automático) ocorrem rapidamente. A estabilização de peso acompanha o processo de flexibilidade psicológica e mudança consistente de hábitos."
+                "text": "Ao atuar na função do comportamento, a percepção de redução da culpa ao comer e o resgate da atenção plena (sair do piloto automático) podem ser notados em um período inicial. A estabilização de peso é um processo que tende a acompanhar o desenvolvimento da flexibilidade psicológica e a consolidação de novos hábitos."
               }
             },
             {
@@ -607,7 +651,7 @@
                     <p>Atendo presencialmente no bairro <strong>Menino Deus, em Porto Alegre</strong>, e online para todo o Brasil. Se você busca uma nutricionista perto de você, sou Letícia Christianetti, criadora do <strong>Método 4F</strong> (ACT, DBT e <em>Mindful Eating</em>) — a abordagem que trata a raiz da <strong>compulsão alimentar</strong> e do comer emocional, sem dietas restritivas.</p>
 
                     <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." class="btn btn-large btn-pulse" target="_blank" rel="noopener">
-                        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" rel="noopener noreferrer">
                             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z" />
                         </svg>
                         Falar com a Especialista
@@ -616,7 +660,7 @@
                 <div class="hero-image-wrapper fade-in-section">
                     <figure class="hero-image">
                         <!-- Imagem de espaço reservado. Substitua pela URL da foto profissional -->
-                        <img src="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp" alt="Letícia Christianetti, Nutricionista Comportamental no consultório em Porto Alegre" width="800" height="533" fetchpriority="high" decoding="async" style="border-radius: 16px; box-shadow: var(--shadow-md); width: 100%; height: auto; object-fit: cover;">
+                        <img src="img/nutricionista-porto-alegre-leticia-christianetti-crn-6746.webp" alt="Letícia Christianetti, Nutricionista Comportamental no consultório em Porto Alegre" width="800" height="533" fetchpriority="high" decoding="async" style="border-radius: 16px; box-shadow: var(--shadow-md); width: 100%; height: auto; object-fit: cover; object-position: top;">
                         <figcaption class="sr-only">Retrato profissional da Nutricionista Letícia Christianetti.</figcaption>
                         <div class="experience-badge" aria-label="17 anos de experiência clínica na área comportamental">
                             <span>17+</span>
@@ -863,7 +907,7 @@
                 </div>
 
                 <div class="text-center" style="margin-top: 40px;">
-                    <a href="https://share.google/5ELW1PqomlS6vaosA" target="_blank" rel="noopener" class="btn btn-pulse" aria-label="Ver todas as avaliações no perfil de empresas do Google">
+                    <a href="https://share.google/5ELW1PqomlS6vaosA" target="_blank" rel="noopener noreferrer" class="btn btn-pulse" aria-label="Ver todas as avaliações no perfil de empresas do Google">
                         Ver Avaliações no Google Meu Negócio
                     </a>
                 </div>
@@ -901,7 +945,7 @@
                             </p>
                         </address>
 
-                        <a href="https://maps.app.goo.gl/Q5G1ppT6NHi7Pcud6" target="_blank" rel="noopener" class="btn btn-pulse" style="width: 100%; margin-top: 20px;">
+                        <a href="https://maps.app.goo.gl/Q5G1ppT6NHi7Pcud6" target="_blank" rel="noopener noreferrer" class="btn btn-pulse" style="width: 100%; margin-top: 20px;">
                             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
                                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                             </svg>
@@ -1032,7 +1076,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Ao atuar na função do comportamento, a redução da culpa ao comer e o resgate da atenção plena (sair do piloto automático) ocorrem rapidamente. A estabilização de peso acompanha o processo de flexibilidade psicológica e mudança consistente de hábitos.</p>
+                            <p>Ao atuar na função do comportamento, a redução da culpa ao comer e o resgate da atenção plena (sair do piloto automático) podem ser notados em um período inicial. A estabilização de peso é um processo que tende a acompanhar o desenvolvimento da flexibilidade psicológica e a consolidação de novos hábitos.</p>
                         </div>
                     </details>
 
@@ -1042,7 +1086,7 @@
                             <span class="faq-icon" aria-hidden="true">+</span>
                         </summary>
                         <div class="faq-answer">
-                            <p>Totalmente. A base do método está no treino de habilidades comportamentais e na Matrix de Análise Funcional. A videoconsulta entrega a mesma profundidade técnica e acolhimento que o atendimento na nossa clínica no Menino Deus.</p>
+                            <p>O acompanhamento online pode oferecer a mesma base técnica do presencial, especialmente porque o método se apoia em habilidades comportamentais e análise funcional, mas a indicação depende do contexto de cada paciente.</p>
                         </div>
                     </details>
 
@@ -1055,7 +1099,7 @@
                             <p>O agendamento é feito diretamente pelo nosso WhatsApp <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." target="_blank" rel="noopener" style="color: var(--color-brand-coral); text-decoration: underline;">(51) 99316-0254</a>. Minha equipe compartilhará a disponibilidade de agenda tanto para atendimento presencial (Menino Deus, Porto Alegre), quanto para videoconsultas em todo o Brasil.</p>
                         </div>
                     </details>
-
+                    
                     <details class="faq-item">
                         <summary class="faq-question">
                             Atende por algum convênio como a Unimed Porto Alegre?
@@ -1076,7 +1120,7 @@
                 <h2>O fim do efeito sanfona começa com a sua decisão de hoje.</h2>
                 <p>Agende sua avaliação inicial. Vamos analisar a fundo a raiz do seu comportamento alimentar e traçar o plano ideal para a sua autonomia corporal.</p>
                 
-                <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." class="btn btn-large btn-cta-alt" target="_blank" rel="noopener" aria-label="Falar agora com a equipe da Letícia no WhatsApp">
+                <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." class="btn btn-large btn-cta-alt" target="_blank" rel="noopener noreferrer" aria-label="Falar agora com a equipe da Letícia no WhatsApp">
                     <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
                         <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z" />
                     </svg>
@@ -1102,7 +1146,7 @@
                 
                 <div class="footer-info">
                     <h3>Atendimento e Contato</h3>
-                    <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." target="_blank" rel="noopener">WhatsApp: (51) 99316-0254</a>
+                    <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." target="_blank" rel="noopener noreferrer">WhatsApp: (51) 99316-0254</a>
                     <p>Atendimento Online via Videoconsulta</p>
                     <p>Atendimento Presencial Exclusivo</p>
                     <p style="margin-top: 10px; font-size: 0.85rem;">Consulta Particular, com fornecimento de NF para solicitação de reembolso de planos de saúde.</p>
@@ -1129,7 +1173,7 @@
     </footer>
 
     <!-- BOTÃO WHATSAPP FLUTUANTE (Acessível) -->
-    <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp para agendar consulta">
+    <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20sobre%20o%20Método%204F." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp para agendar consulta">
         <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z" />
         </svg>
