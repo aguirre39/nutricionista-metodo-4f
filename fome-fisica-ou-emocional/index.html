@@ -40,85 +40,124 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@600;700;800;900&display=swap"></noscript>
 
-    <!-- SCHEMA MARKUP (Article + MedicalWebPage) focado em SEO de IA -->
+    <!-- SCHEMA: MedicalWebPage -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "MedicalWebPage",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://nutricaocontextual.com.br/fome-fisica-ou-emocional/"
-      },
-      "isPartOf": { "@id": "https://nutricaocontextual.com.br/#website" },
-      "headline": "Fome Física ou Fome Emocional: Como Identificar e Tratar",
-      "description": "A fome física aparece aos poucos e qualquer alimento satisfaz. A fome emocional surge de repente e pede alimentos específicos. Saber diferenciar é o primeiro passo para tratar o comer emocional.",
-      "author": { "@id": "https://nutricaocontextual.com.br/#person" },
-      "publisher": { "@id": "https://nutricaocontextual.com.br/#business" },
-      "inLanguage": "pt-BR",
-      "datePublished": "2026-07-05",
-      "dateModified": "2026-07-05",
-      "about": [
-        {"@type": "Thing", "name": "Fome Emocional"},
-        {"@type": "Thing", "name": "Comer Emocional"},
-        {"@type": "Thing", "name": "Mindful Eating"},
-        {"@type": "Thing", "name": "Nutrição Comportamental"}
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+          "@type": "MedicalWebPage",
+          "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://nutricaocontextual.com.br/fome-fisica-ou-emocional/"
+          },
+          "isPartOf": { "@id": "https://nutricaocontextual.com.br/#website" },
+          "headline": "Fome Física ou Fome Emocional: Como Identificar e Tratar",
+          "description": "A fome física aparece aos poucos e qualquer alimento satisfaz. A fome emocional surge de repente e pede alimentos específicos. Saber diferenciar é o primeiro passo para tratar o comer emocional.",
+          "author": { "@id": "https://nutricaocontextual.com.br/#person" },
+          "publisher": { "@id": "https://nutricaocontextual.com.br/#business" },
+          "inLanguage": "pt-BR",
+          "datePublished": "2026-07-06",
+          "dateModified": "2026-07-06",
+          "lastReviewed": "2026-07-06",
+          "reviewedBy": {
+              "@type": "Person",
+              "name": "Letícia Christianetti",
+              "jobTitle": "Nutricionista",
+              "identifier": "CRN 6746"
+          },
+          "medicalAudience": {
+              "@type": "MedicalAudience",
+              "audienceType": "Patient"
+          },
+          "about": [
+              {
+              "@type": "MedicalCondition",
+              "name": "Compulsão Alimentar",
+              "alternateName": "Binge Eating",
+              "sameAs": "https://www.wikidata.org/wiki/Q863777"
+              },
+              {
+              "@type": "MedicalTherapy",
+              "name": "Nutrição Comportamental"
+              },
+              {
+              "@type": "Thing",
+              "name": "Fome Emocional",
+              "sameAs": "https://www.wikidata.org/wiki/Q5373678"
+              },
+              {
+              "@type": "Thing",
+              "name": "Mindful Eating",
+              "sameAs": "https://www.wikidata.org/wiki/Q3327309"
+              }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+              {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://nutricaocontextual.com.br/"
+              },
+              {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Fome Física ou Fome Emocional",
+              "item": "https://nutricaocontextual.com.br/fome-fisica-ou-emocional/"
+              }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+              {
+              "@type": "Question",
+              "name": "Quais são os principais sinais da fome física?",
+              "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A fome física é gradual: começa com um leve vazio no estômago que vai aumentando com o tempo. Ela aceita qualquer tipo de alimento, vem acompanhada de sinais corporais como ronco no estômago, queda de energia e dificuldade de concentração, e desaparece assim que você come uma quantidade razoável, gerando satisfação e não culpa."
+              }
+              },
+              {
+              "@type": "Question",
+              "name": "Quais são os principais sinais da fome emocional?",
+              "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A fome emocional surge de repente e parece urgente. Costuma pedir alimentos específicos — doces, frituras ou ultraprocessados — e não está associada a sinais físicos de fome no estômago. Mesmo depois de comer, a satisfação não vem, e muitas vezes é seguida de culpa ou vontade de continuar comendo."
+              }
+              },
+              {
+              "@type": "Question",
+              "name": "É normal sentir fome emocional às vezes?",
+              "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim, é absolutamente humano recorrer à comida em busca de conforto ocasionalmente. A questão se torna clínica quando o comer emocional se torna o principal mecanismo de regulação das emoções, ocorre com muita frequência ou vem acompanhado de sofrimento significativo, como em episódios de compulsão alimentar."
+              }
+              },
+              {
+              "@type": "Question",
+              "name": "Como a Escala de Fome ajuda a diferenciar os dois tipos de fome?",
+              "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A Escala de Fome é uma ferramenta prática de 0 a 10 que ajuda a pausar antes de comer e perguntar: onde eu estou nessa escala agora? Fomes físicas correspondem a notas baixas na escala. O desejo de comer sem relação com a escala, ou mesmo em notas altas de saciedade, é um forte indício de motivação emocional e não fisiológica."
+              }
+              },
+              {
+              "@type": "Question",
+              "name": "Como saber se é fome ou ansiedade?",
+              "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A fome física é gradual e se manifesta no estômago com sinais como ronco e queda de energia. Já a vontade de comer por ansiedade surge de forma súbita, parece urgente e costuma pedir alimentos específicos para conforto imediato, sem sinais físicos reais de fome."
+              }
+              }
+          ]
+        }
       ]
     }
     </script>
-    <!-- SCHEMA MARKUP (Breadcrumb) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://nutricaocontextual.com.br/"
-      },{
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Fome Física ou Fome Emocional"
-      }]
-    }
-    </script>
-    <!-- SCHEMA MARKUP (FAQPage) - perguntas exclusivas desta página, sem repetir home/satélite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Quais são os principais sinais da fome física?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A fome física é gradual: começa com um leve vazio no estômago que vai aumentando com o tempo. Ela aceita qualquer tipo de alimento (não pede algo específico), vem acompanhada de sinais corporais como ronco no estômago, queda de energia e dificuldade de concentração, e desaparece assim que você come uma quantidade razoável de comida, gerando sensação de satisfação e não de culpa."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Quais são os principais sinais da fome emocional?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A fome emocional surge de repente e parece urgente, como se precisasse ser saciada imediatamente. Ela costuma pedir alimentos específicos, geralmente doces, frituras ou ultraprocessados, e não está associada a sinais físicos de fome no estômago. Mesmo depois de comer, a sensação de satisfação não vem — muitas vezes é seguida de culpa, vergonha ou a vontade de continuar comendo."
-        }
-      }, {
-        "@type": "Question",
-        "name": "É normal sentir fome emocional às vezes?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sim, é absolutamente humano recorrer à comida em busca de conforto ocasionalmente — isso não é um problema em si. A questão se torna clínica quando o comer emocional se torna o principal ou único mecanismo de regulação das emoções, ocorre com muita frequência ou vem acompanhado de sofrimento significativo, como em episódios de compulsão alimentar."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Como a Escala de Fome ajuda a diferenciar os dois tipos de fome?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Escala de Fome é uma ferramenta prática de 0 a 10 que ajuda a pausar antes de comer e perguntar: 'onde eu estou nessa escala agora?'. Fomes físicas costumam corresponder a notas mais baixas na escala (fome leve a fome real), enquanto o desejo de comer sem relação com a escala, ou mesmo em notas altas de saciedade, é um forte indício de que a motivação é emocional e não fisiológica."
-        }
-      }]
-    }
-    </script>
-
     <style>
         /* CSS OTIMIZADO E ACESSÍVEL (WCAG AAA) - MESMA BASE DA HOME E DO MÉTODO 4F */
         :root {
@@ -283,7 +322,7 @@
                 <a href="tel:+5551993160254" class="header-phone-link" aria-label="Ligar para Letícia Christianetti">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M6.54 5c.06.89.21 1.76.45 2.59l-1.2 1.2c-.41-1.2-.67-2.47-.76-3.79h1.51m10.92 14c.85-.24 1.72-.39 2.59-.45v1.51c-1.32-.09-2.59-.35-3.79-.76l1.2-1.2M7.5 3H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.49c0-.55-.45-1-1-1-1.24 0-2.45-.2-3.57-.57-.1-.04-.21-.05-.31-.05-.26 0-.51.1-.71.29l-2.2 2.2c-2.83-1.45-5.15-3.76-6.59-6.59l2.2-2.2c.28-.28.36-.67.25-1.02C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1z"/></svg>
                 </a>
-                <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20pelo%20site." class="btn btn-pulse header-btn" target="_blank" rel="noopener">
+                <a href="https://wa.me/5551993160254?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20pelo%20site." class="btn btn-pulse header-btn" target="_blank" rel="noopener noreferrer">
                     Agendar Avaliação
                 </a>
             </div>
@@ -297,7 +336,7 @@
                 <a href="../">Home</a> / <span>Fome Física ou Emocional?</span>
             </div>
             <h1>Fome Física ou Fome Emocional: Como Identificar e Tratar</h1>
-            <p>Aprenda a reconhecer os sinais do seu corpo e a diferença entre fome real e fome emocional — o primeiro passo para romper o ciclo do comer descontrolado.</p>
+            <p>Aprenda a reconhecer os sinais do seu corpo e a diferença entre fome real e fome emocional — o primeiro passo para romper o ciclo do comer emocional e da compulsão alimentar.</p>
         </div>
     </section>
 
@@ -346,7 +385,7 @@
         <p>A fome emocional, por outro lado, não nasce no estômago — nasce na mente, como resposta a uma emoção que a pessoa ainda não sabe processar de outra forma. Os sinais mais comuns são:</p>
         <ul>
             <li><strong>Surge de repente</strong> e parece urgente, como se precisasse ser resolvida imediatamente.</li>
-            <li><strong>Pede alimentos específicos</strong> — quase sempre ultraprocessados, doces ou frituras, nunca uma fruta ou um prato equilibrado.</li>
+            <li><strong>Pede alimentos específicos</strong> — como a famosa vontade de comer doce do nada, ultraprocessados ou frituras, em vez de uma refeição comum.</li>
             <li><strong>Não está ligada a sinais físicos</strong> de fome, podendo aparecer mesmo logo após uma refeição completa.</li>
             <li><strong>Está associada a uma emoção</strong>, como tédio, ansiedade, tristeza, solidão ou estresse.</li>
             <li><strong>Não passa com a comida.</strong> Mesmo depois de comer, a sensação de satisfação não vem — em vez disso, aparecem culpa, vergonha ou vontade de continuar comendo.</li>
@@ -371,7 +410,6 @@
         </table>
 
         <figure style="margin: 40px 0; text-align: center;">
-            <!-- Substitua 'caminho/para/sua/imagem.webp' pelo caminho real da imagem -->
             <img src="../img/fome-fisica-ou-fome-emocional-diferencas.webp" alt="Infográfico comparando a fome física, que vem do estômago, com a fome emocional, que vem da cabeça e das emoções." style="border-radius: var(--border-radius); box-shadow: var(--shadow-md); max-width: 700px; width: 100%;" loading="lazy" decoding="async" width="700" height="467">
             <figcaption style="font-size: 0.9rem; color: var(--color-text-light); margin-top: 10px; font-style: italic;">Saber diferenciar a origem da fome é o primeiro passo para a autonomia alimentar.</figcaption>
         </figure>
@@ -419,7 +457,7 @@
         <p>Identificar que a fome é emocional já é metade do caminho — mas isso não significa que a pessoa deva simplesmente "não comer" ou se punir pela vontade. O objetivo não é reprimir a emoção, e sim aprender a atravessá-la sem usar a comida como único recurso.</p>
         <ul>
             <li><strong>Nomeie a emoção antes de agir.</strong> Perguntar "o que estou sentindo agora?" já reduz a impulsividade da resposta automática.</li>
-            <li><strong>Dê um espaço de tempo</strong> entre o impulso e a ação — mesmo que sejam apenas 5 minutos, isso já rompe o piloto automático.</li>
+            <li><strong>Dê um espaço de tempo</strong> entre o impulso e a ação — mesmo que sejam apenas 5 minutos. Isso ajuda especialmente em episódios de comer por ansiedade e fome emocional à noite.</li>
             <li><strong>Tenha estratégias de regulação emocional</strong> além da comida, como técnicas de respiração e regulação fisiológica rápida.</li>
             <li><strong>Evite a dicotomia alimentar.</strong> Proibir o alimento completamente costuma aumentar, e não diminuir, a compulsão por ele.</li>
             <li><strong>Busque acompanhamento profissional</strong> quando o comer emocional for frequente, intenso ou vier acompanhado de sofrimento.</li>
@@ -464,6 +502,10 @@
                 <summary>Como a Escala de Fome ajuda a diferenciar os dois tipos de fome?</summary>
                 <div class="faq-answer"><p>A Escala de Fome é uma ferramenta prática de 0 a 10 que ajuda a pausar antes de comer e perguntar: "onde eu estou nessa escala agora?". Fomes físicas costumam corresponder a notas mais baixas na escala (fome leve a fome real), enquanto o desejo de comer sem relação com a escala, ou mesmo em notas altas de saciedade, é um forte indício de que a motivação é emocional e não fisiológica.</p></div>
             </details>
+            <details class="faq-item">
+                <summary>Como saber se é fome ou ansiedade?</summary>
+                <div class="faq-answer"><p>A melhor forma de saber se é fome ou ansiedade é observar os sinais. A fome física é gradual e se manifesta no estômago. Já a vontade de comer por ansiedade surge de forma súbita, parece urgente e costuma pedir alimentos específicos para conforto imediato.</p></div>
+            </details>
         </section>
 
         <div class="author-box">
@@ -489,7 +531,7 @@
     </footer>
 
     <!-- BOTÃO WHATSAPP -->
-    <a href="https://wa.me/5551993160254?text=Olá!%20Vi%20o%20artigo%20sobre%20Fome%20Física%20e%20Emocional%20e%20gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Abrir conversa no WhatsApp">
+    <a href="https://wa.me/5551993160254?text=Olá!%20Vi%20o%20artigo%20sobre%20Fome%20Física%20e%20Emocional%20e%20gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir conversa no WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 1.856.001 3.598.723 4.907 2.034 1.31 1.311 2.031 3.054 2.03 4.908-.001 3.825-3.113 6.938-6.937 6.938z" /></svg>
     </a>
 </body>
