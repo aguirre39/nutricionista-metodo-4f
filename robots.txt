@@ -51,7 +51,7 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-# 3. Regra Geral para outros bots
+# 3. Regra Geral para outros bots ia
 User-agent: *
 Allow: /
 
