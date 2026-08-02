@@ -1,0 +1,5 @@
+# Redirecionar o WWW para o domínio principal (SEO Canonical)
+https://www.nutricaocontextual.com.br/* https://nutricaocontextual.com.br/:splat 301!
+
+# Remover o /index.html final da URL caso alguém digite
+/index.html / 301!
